@@ -1,4 +1,4 @@
-# BEAN's Security Lab
+## BEAN's Security Notes
 
 Welcome to my personal blog!
 
