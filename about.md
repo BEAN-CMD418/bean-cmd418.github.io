@@ -4,7 +4,7 @@ title: About Me
 permalink: /about/
 ---
 
-# 안녕하세요!
+## 안녕하세요!
 
 정보보안을 공부하고 있는 대학생입니다.
 
