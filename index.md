@@ -103,12 +103,8 @@ layout: default
       <svg viewBox="0 0 24 24" fill="none"
            stroke="currentColor" stroke-width="1.8"
            stroke-linecap="round" stroke-linejoin="round">
-        <path d="m9 3 6 6"></path>
-        <path d="m7 5 6 6"></path>
-        <path d="M13 11a5 5 0 0 1-7 7"></path>
-        <path d="M6 18h12"></path>
-        <path d="M14 14a7 7 0 0 0 7 7"></path>
-        <path d="M18 21h3"></path>
+        <circle cx="11" cy="11" r="7"></circle>
+        <path d="m20 20-4-4"></path>
       </svg>
     </span>
     <span class="category-title">Research</span>
