@@ -1,4 +1,4 @@
-## BEAN's Security Notes
+# BEAN's Security Notes
 
 Welcome to my personal blog!
 
@@ -9,7 +9,7 @@ Welcome to my personal blog!
 안녕하세요. 정보보안을 공부하고 있는 학부생입니다.
 
 개발과 웹, 임베디드 보안 등에 관심이 있으며,
-다양한 기술을 학습하고 경험한 내용을 정리하고 있습니다.
+다양한 기술과 개념을 학습하고 경험한 내용을 정리하고 있습니다.
 
 ## Categories
 
