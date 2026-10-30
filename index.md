@@ -1,5 +1,5 @@
 ---
-layout: home
+layout: default
 ---
 
 # Learning · Exploring · <span style="color:#397CB5">Documenting</span>
