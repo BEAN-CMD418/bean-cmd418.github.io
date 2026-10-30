@@ -4,8 +4,6 @@ title: Categories
 permalink: /categories/
 ---
 
-# Categories
-
 정보보안과 컴퓨터공학을 공부하며 기록한 내용을 주제별로 정리합니다.
 
 ## 01. 개발 (Development)
