@@ -13,8 +13,19 @@ layout: default
 <div class="category-grid">
 
 <a class="category-card" href="{{ '/development/' | relative_url }}">
-  <span class="category-number">01</span>
-  <span class="category-title">Development</span>
+  <span class="category-topline">
+    <span class="category-number">01</span>
+    <span class="category-icon">
+      <svg viewBox="0 0 24 24" fill="none"
+           stroke="currentColor" stroke-width="1.8"
+           stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="16 18 22 12 16 6"></polyline>
+        <polyline points="8 6 2 12 8 18"></polyline>
+        <line x1="14" y1="4" x2="10" y2="20"></line>
+      </svg>
+    </span>
+    <span class="category-title">Development</span>
+  </span>
   <span class="category-description">개발 및 컴퓨터공학</span>
 </a>
 
