@@ -13,8 +13,9 @@ layout: default
 <div class="category-grid">
 
 <a class="category-card" href="{{ '/development/' | relative_url }}">
+  <span class="category-number">01</span>
+
   <span class="category-topline">
-    <span class="category-number">01</span>
     <span class="category-icon">
       <svg viewBox="0 0 24 24" fill="none"
            stroke="currentColor" stroke-width="1.8"
@@ -26,6 +27,7 @@ layout: default
     </span>
     <span class="category-title">Development</span>
   </span>
+
   <span class="category-description">개발 및 컴퓨터공학</span>
 </a>
 
