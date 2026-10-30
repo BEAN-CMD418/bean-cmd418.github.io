@@ -1,7 +1,11 @@
-title: "BEAN's Security Lab"
+title: "BEAN's Security Notes"
 description: "Development, Information Security and Research"
 author: "BEAN"
 
 theme: minima
 
 lang: ko-KR
+
+header_pages:
+  - about.md
+  - categories.md
