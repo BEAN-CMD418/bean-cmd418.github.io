@@ -1,9 +1,8 @@
-
 ---
 layout: home
 ---
 
-# Learning. Exploring. <span style="color:#397CB5">Documenting.</span>
+# Learning · Exploring · <span style="color:#397CB5">Documenting</span>
 
 정보보안과 컴퓨터공학을 공부하며 배운 내용과 경험을 기록하는 개인 블로그입니다.
 
