@@ -289,3 +289,10 @@ pre { overflow-x: auto; padding: 16px; background: #f2f5f8; border: 1px solid va
   .post-article-body { font-size: 14px; }
   .post-article-footer { flex-direction: column; gap: 8px; }
 }
+
+
+/* Category page post cards should not inherit the generic content-link underline. */
+.page-content .category-post-list .post-row {
+  color: inherit;
+  text-decoration: none;
+}
