@@ -1,0 +1,59 @@
+<aside class="sidebar" aria-label="Blog sidebar">
+  <section class="profile-block">
+    <div class="bean-avatar">
+      <img src="https://img.icons8.com/external-bi-chroma-amoghdesign/96/external-bean-fruits-and-vegetables-bi-chroma-amoghdesign.png" alt="콩 아이콘">
+    </div>
+    <div class="profile-copy">
+      <h2>BEAN</h2>
+      <p class="profile-role">Security Enthusiast</p>
+      <p class="profile-motto">Learning · Exploring · Documenting</p>
+    </div>
+    <p class="profile-description">보안과 컴퓨터 기술을 공부하고 경험을 기록합니다.</p>
+  </section>
+
+  <section class="sidebar-section search-section">
+    <h2 class="sidebar-heading">Search</h2>
+    <label class="search-box">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"></circle><path d="m16 16 5 5"></path></svg>
+      <input id="post-search" type="search" placeholder="검색어를 입력하세요." autocomplete="off">
+    </label>
+    <p class="search-hint" id="search-status" aria-live="polite"></p>
+  </section>
+
+  <section class="sidebar-section">
+    <h2 class="sidebar-heading">
+      <svg class="heading-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 13 11 22 2 13V4h9z"></path><circle cx="7" cy="9" r="1.3"></circle></svg>
+      Tags
+    </h2>
+    <div class="tag-list" id="tag-list">
+      {% assign all_tags = site.tags | sort %}
+      {% for tag in all_tags limit: 18 %}
+        <button class="tag-chip" type="button" data-tag="{{ tag[0] | escape }}">#{{ tag[0] }}</button>
+      {% endfor %}
+      {% if all_tags.size == 0 %}
+        <span class="muted-note">게시글에 태그를 추가하면 여기에 표시됩니다.</span>
+      {% endif %}
+    </div>
+  </section>
+
+  <section class="sidebar-section category-section">
+    <h2 class="sidebar-heading">
+      <svg class="heading-icon grid-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect></svg>
+      Categories
+    </h2>
+    <div class="category-tree">
+      {% for category in site.data.categories %}
+        <details class="category-node">
+          <summary>
+            <span class="category-number">{{ category.id }}</span>
+            <span class="category-name">{{ category.title }}</span>
+            <svg class="category-chevron" viewBox="0 0 16 16" aria-hidden="true"><path d="m3 6 5 5 5-5"></path></svg>
+          </summary>
+          <div class="category-children">
+            <a href="{{ category.url | relative_url }}"><span class="tree-branch">└</span> 전체 글 보기</a>
+          </div>
+        </details>
+      {% endfor %}
+    </div>
+  </section>
+</aside>
