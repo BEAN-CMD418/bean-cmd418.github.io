@@ -1,0 +1,50 @@
+---
+layout: default
+---
+<div class="post-page-grid">
+  {% include blog-sidebar.html %}
+  <article class="post-article">
+    {% assign post_category = page.categories | first %}
+    {% assign category_label = post_category | replace: '-', ' ' | capitalize %}
+    {% assign category_url = nil %}
+    {% for category in site.data.categories %}
+      {% assign category_slug = category.title | slugify %}
+      {% assign post_category_slug = post_category | slugify %}
+      {% if category_slug == post_category_slug %}
+        {% assign category_label = category.title %}
+        {% assign category_url = category.url %}
+      {% endif %}
+    {% endfor %}
+
+    <header class="post-article-header">
+      <div class="post-article-meta">
+        {% if post_category %}
+          {% if category_url %}
+            <a class="post-category" href="{{ category_url | relative_url }}">{{ category_label }}</a>
+          {% else %}
+            <span class="post-category">{{ category_label }}</span>
+          {% endif %}
+        {% endif %}
+        <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%Y.%m.%d' }}</time>
+      </div>
+      <h1 class="post-article-title">{{ page.title }}</h1>
+    </header>
+
+    <div class="post-article-divider"></div>
+
+    <div class="post-article-body">
+      {{ content }}
+    </div>
+
+    {% if page.tags and page.tags.size > 0 %}
+      <footer class="post-article-footer">
+        <span class="post-tags-label">TAGS</span>
+        <div class="tag-list">
+          {% for tag in page.tags %}
+            <span class="tag-chip">#{{ tag }}</span>
+          {% endfor %}
+        </div>
+      </footer>
+    {% endif %}
+  </article>
+</div>
