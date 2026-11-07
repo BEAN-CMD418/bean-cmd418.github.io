@@ -2,7 +2,7 @@
 layout: default
 ---
 <div class="post-page-grid">
-  {% include blog-sidebar.html %}
+  {% include blog-sidebar.html hide_profile=true %}
   <article class="post-article">
     {% assign post_category = page.categories | first %}
     {% assign category_label = post_category | replace: '-', ' ' | capitalize %}
