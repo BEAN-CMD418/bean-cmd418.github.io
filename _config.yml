@@ -7,3 +7,9 @@ lang: ko-KR
 header_pages:
   - about.md
   - categories.md
+
+defaults:
+  - scope:
+      path: "_posts"
+    values:
+      layout: post
