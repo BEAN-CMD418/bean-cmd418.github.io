@@ -1,0 +1,98 @@
+---
+layout: default
+---
+<div class="home-grid">
+  <aside class="sidebar" aria-label="Blog sidebar">
+    <section class="profile-block">
+      <div class="bean-avatar" aria-label="Bean emoji profile">🫘</div>
+      <div class="profile-copy">
+        <h2>BEAN</h2>
+        <p class="profile-role">Security Enthusiast</p>
+        <p class="profile-motto">Learning · Exploring · Documenting</p>
+      </div>
+      <p class="profile-description">보안과 컴퓨터 기술을 공부하고 경험을 기록합니다.</p>
+    </section>
+
+    <section class="sidebar-section search-section">
+      <h2 class="sidebar-heading">Search</h2>
+      <label class="search-box">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"></circle><path d="m16 16 5 5"></path></svg>
+        <input id="post-search" type="search" placeholder="검색어를 입력하세요." autocomplete="off">
+      </label>
+      <p class="search-hint" id="search-status" aria-live="polite"></p>
+    </section>
+
+    <section class="sidebar-section">
+      <h2 class="sidebar-heading">
+        <svg class="heading-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 13 11 22 2 13V4h9z"></path><circle cx="7" cy="9" r="1.3"></circle></svg>
+        Tags
+      </h2>
+      <div class="tag-list" id="tag-list">
+        {% assign all_tags = site.tags | sort %}
+        {% for tag in all_tags limit: 18 %}
+          <button class="tag-chip" type="button" data-tag="{{ tag[0] | escape }}">#{{ tag[0] }}</button>
+        {% endfor %}
+        {% if all_tags.size == 0 %}
+          <span class="muted-note">게시글에 태그를 추가하면 여기에 표시됩니다.</span>
+        {% endif %}
+      </div>
+    </section>
+
+    <section class="sidebar-section category-section">
+      <h2 class="sidebar-heading">
+        <svg class="heading-icon grid-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect></svg>
+        Categories
+      </h2>
+      <div class="category-tree">
+        {% for category in site.data.categories %}
+          <details class="category-node">
+            <summary>
+              <span class="category-number">{{ category.id }}</span>
+              <span class="category-name">{{ category.title }}</span>
+              <svg class="category-chevron" viewBox="0 0 16 16" aria-hidden="true"><path d="m3 6 5 5 5-5"></path></svg>
+            </summary>
+            <div class="category-children">
+              <a href="{{ category.url | relative_url }}"><span class="tree-branch">└</span> 전체 글 보기</a>
+            </div>
+          </details>
+        {% endfor %}
+      </div>
+    </section>
+  </aside>
+
+  <section class="latest-section" aria-labelledby="latest-heading">
+    <div class="section-heading">
+      <h2 id="latest-heading">Latest Posts</h2>
+      <a href="{{ '/categories/' | relative_url }}" class="more-link">카테고리 전체 보기 <span aria-hidden="true">›</span></a>
+    </div>
+
+    <div class="post-list" id="post-list">
+      {% assign latest_posts = site.posts | sort: 'date' | reverse %}
+      {% for post in latest_posts %}
+        {% assign category_label = post.categories | first | default: 'BLOG' %}
+        <a class="post-row{% unless post.image %} post-row-no-image{% endunless %}" href="{{ post.url | relative_url }}" data-post-row data-initial-hidden="{% if forloop.index > 10 %}true{% else %}false{% endif %}" {% if forloop.index > 10 %}hidden{% endif %} data-title="{{ post.title | escape }}" data-tags="{{ post.tags | join: '||' | escape }}" data-categories="{{ post.categories | join: ' ' | escape }}" data-search-content="{{ post.content | strip_html | normalize_whitespace | escape }}">
+          {% if post.image %}
+          <div class="post-thumb">
+            <img src="{{ post.image | relative_url }}" alt="" loading="lazy">
+          </div>
+          {% endif %}
+          <div class="post-main">
+            <div class="post-meta-line">
+              <span class="post-category">{{ category_label | replace: '-', ' ' | upcase }}</span>
+              <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%Y.%m.%d' }}</time>
+            </div>
+            <h3>{{ post.title }}</h3>
+            <p>{{ post.excerpt | default: post.content | strip_html | normalize_whitespace | truncate: 100 }}</p>
+          </div>
+        </a>
+      {% endfor %}
+      {% if latest_posts.size == 0 %}
+        <div class="empty-posts">
+          <h3>아직 게시글이 없습니다.</h3>
+          <p>새 글을 <code>_posts</code> 폴더에 추가하면 이곳에 최신순으로 표시됩니다.</p>
+        </div>
+      {% endif %}
+    </div>
+    <p class="no-results" id="no-results" hidden>검색 결과가 없습니다.</p>
+  </section>
+</div>
