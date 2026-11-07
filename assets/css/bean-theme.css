@@ -294,20 +294,20 @@ pre { overflow-x: auto; padding: 16px; background: #f2f5f8; border: 1px solid va
 /* Category page post cards should not inherit the generic content-link underline. */
 .page-content .category-post-list .post-row {
   color: inherit;
-  text-decoration: none;
+  text-decoration: none !important;
 }
 
 
 /* Simple return link on individual category pages. */
-.category-back-link {
+.page-content .category-back-link {
   display: inline-block;
   margin: 0 0 18px;
   color: var(--blue-deep);
   font-size: 13px;
   font-weight: 700;
-  text-decoration: none;
+  text-decoration: none !important;
 }
-.category-back-link:hover {
+.page-content .category-back-link:hover {
   color: var(--blue);
   text-decoration: none;
 }
