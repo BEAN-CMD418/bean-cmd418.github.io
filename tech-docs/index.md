@@ -1,5 +1,6 @@
 ---
 category_icon: tech-docs
+category: Tech Docs
 layout: page
 title: Tech Docs
 permalink: /tech-docs/
