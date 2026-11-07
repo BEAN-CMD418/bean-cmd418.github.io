@@ -1,4 +1,5 @@
 ---
+category_icon: development
 layout: page
 title: Development
 permalink: /development/
