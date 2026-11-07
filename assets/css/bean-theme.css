@@ -311,3 +311,18 @@ pre { overflow-x: auto; padding: 16px; background: #f2f5f8; border: 1px solid va
   color: var(--blue);
   text-decoration: none;
 }
+
+
+/* Category detail pages: align the post list with the full-width accent band. */
+.page-body.category-detail-body {
+  max-width: none;
+}
+.category-detail-body > h1:first-child {
+  margin: 0 0 6px;
+}
+.category-detail-body > h1:first-child + p {
+  margin-top: 0;
+}
+.category-detail-body .category-post-section {
+  margin-top: 32px;
+}
