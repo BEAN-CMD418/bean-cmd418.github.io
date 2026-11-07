@@ -1,4 +1,5 @@
 ---
+category_icon: ctf
 layout: page
 title: CTF/Wargame
 permalink: /ctf/
