@@ -3,7 +3,7 @@
   description: "프로그래밍, 자료구조, 알고리즘 및 컴퓨터공학 관련 학습 기록"
   url: "/development/"
 - id: "02"
-  title: "CTF · Wargame"
+  title: "CTF / Wargame"
   description: "CTF 문제 풀이 과정과 워게임 실습 기록"
   url: "/ctf/"
 - id: "03"
