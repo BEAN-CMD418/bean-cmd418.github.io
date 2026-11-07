@@ -1,0 +1,11 @@
+---
+layout: default
+---
+<div class="page-content{% if page.url contains 'categories' %} categories-page{% endif %}">
+  <header class="page-heading">
+    <h1>{{ page.title }}</h1>
+  </header>
+  <div class="page-body">
+    {{ content }}
+  </div>
+</div>
