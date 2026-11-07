@@ -1,5 +1,6 @@
 ---
 category_icon: research
+category: Research
 layout: page
 title: Research
 permalink: /research/
