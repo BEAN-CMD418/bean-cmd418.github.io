@@ -55,9 +55,9 @@ button, input { font: inherit; }
   position: relative; gap: 40px;
 }
 .hero-copy { position: relative; z-index: 2; padding: 38px 0; max-width: 720px; }
-.hero-kicker { margin: 0 0 14px; font-size: 12px; font-weight: 700; letter-spacing: 2.5px; color: #e1effa; }
-.hero h1 { margin: 0 0 12px; color: #fff; font-size: clamp(32px, 4vw, 52px); line-height: 1.2; letter-spacing: -1.7px; font-weight: 800; }
-.hero-copy > p:last-child { margin: 0; color: #edf6fd; font-size: 17px; }
+.hero-kicker { margin: 0 0 14px; font-size: calc(12px + 1pt); font-weight: 700; letter-spacing: 2.5px; color: #e1effa; }
+.hero h1 { margin: 0 0 12px; color: #fff; font-size: clamp(calc(32px + 1pt), calc(4vw + 1pt), calc(52px + 1pt)); line-height: 1.2; letter-spacing: -1.7px; font-weight: 800; }
+.hero-copy > p:last-child { margin: 0; color: #edf6fd; font-size: calc(17px + 1pt); }
 .hero-art { position: relative; flex: 0 0 340px; height: 210px; align-self: stretch; overflow: hidden; }
 .hero-grid {
   position: absolute; inset: 20px -30px -50px 0; opacity: .24;
@@ -208,8 +208,8 @@ pre { overflow-x: auto; padding: 16px; background: #f2f5f8; border: 1px solid va
   .main-nav a[aria-current="page"]::after { bottom: 7px; }
   .hero-inner { min-height: 205px; }
   .hero-copy { padding: 30px 0; }
-  .hero h1 { font-size: 30px; }
-  .hero-copy > p:last-child { max-width: 290px; font-size: 13px; }
+  .hero h1 { font-size: calc(30px + 1pt); }
+  .hero-copy > p:last-child { max-width: 290px; font-size: calc(13px + 1pt); }
   .hero-art { position: absolute; right: -100px; width: 230px; opacity: .35; }
   .hero-window { right: 30px; transform: scale(.8); }
   .page-shell { padding-top: 25px; }
