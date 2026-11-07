@@ -1,5 +1,6 @@
 ---
 category_icon: ctf
+category: CTF
 layout: page
 title: CTF / Wargame
 permalink: /ctf/
