@@ -8,5 +8,35 @@ layout: default
   <div class="page-accent-band" aria-hidden="true"></div>
   <div class="page-body">
     {{ content }}
+
+    {% if page.category %}
+      {% assign category_posts = site.posts | where_exp: "post", "post.categories contains page.category" | sort: 'date' | reverse %}
+      <section class="category-post-section" aria-labelledby="category-post-heading">
+        <div class="section-heading">
+          <h2 id="category-post-heading">게시글</h2>
+          <span class="category-post-count">{{ category_posts.size }}개의 글</span>
+        </div>
+        <div class="post-list category-post-list">
+          {% for post in category_posts %}
+            <a class="post-row post-row-no-image" href="{{ post.url | relative_url }}">
+              <div class="post-main">
+                <div class="post-meta-line">
+                  <span class="post-category">{{ page.category }}</span>
+                  <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%Y.%m.%d' }}</time>
+                </div>
+                <h3>{{ post.title }}</h3>
+                <p>{{ post.excerpt | default: post.content | strip_html | normalize_whitespace | truncate: 100 }}</p>
+              </div>
+            </a>
+          {% endfor %}
+          {% if category_posts.size == 0 %}
+            <div class="empty-posts">
+              <h3>아직 게시글이 없습니다.</h3>
+              <p>이 카테고리로 분류된 게시글이 작성되면 여기에 표시됩니다.</p>
+            </div>
+          {% endif %}
+        </div>
+      </section>
+    {% endif %}
   </div>
 </div>
