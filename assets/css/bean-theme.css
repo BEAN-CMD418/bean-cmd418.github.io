@@ -240,3 +240,52 @@ pre { overflow-x: auto; padding: 16px; background: #f2f5f8; border: 1px solid va
   .category-page-icon { width: 26px; height: 26px; margin-right: 7px; }
   .footer-inner { flex-direction: column; gap: 4px; }
 }
+
+
+/* Shared sidebar and individual post layout */
+.sidebar { position: sticky; top: 24px; align-self: start; }
+.post-page-grid {
+  display: grid;
+  grid-template-columns: 330px minmax(0, 1fr);
+  gap: 34px;
+  align-items: start;
+}
+.post-article { min-width: 0; max-width: 920px; padding: 4px 0 30px; }
+.post-article-header { padding: 0 0 20px; }
+.post-article-meta {
+  display: flex; align-items: center; gap: 14px;
+  margin: 0 0 15px; color: var(--muted); font-size: 12px;
+}
+.post-article-meta time { white-space: nowrap; }
+.post-article-title {
+  margin: 0; color: var(--ink); font-size: clamp(27px, 3vw, 36px);
+  line-height: 1.35; letter-spacing: -.8px; font-weight: 800;
+  overflow-wrap: anywhere;
+}
+.post-article-divider { height: 1px; width: 100%; background: #cfdbe6; margin: 0 0 30px; }
+.post-article-body { max-width: 850px; min-height: 300px; color: #536274; font-size: 15px; line-height: 1.9; }
+.post-article-body h1 { margin: 28px 0 14px; color: var(--ink); font-size: 25px; line-height: 1.4; }
+.post-article-body h2 { margin: 30px 0 12px; padding: 2px 0 2px 12px; border-left: 3px solid var(--blue); color: var(--ink); font-size: 20px; line-height: 1.45; }
+.post-article-body h3 { margin: 24px 0 10px; color: var(--ink); font-size: 17px; }
+.post-article-body p, .post-article-body li { color: #536274; }
+.post-article-body p { margin: 0 0 16px; }
+.post-article-body a { color: var(--blue-deep); text-decoration: underline; text-underline-offset: 3px; }
+.post-article-body img { max-width: 100%; height: auto; border-radius: 5px; }
+.post-article-body blockquote { margin: 18px 0; padding: 10px 18px; border-left: 3px solid #9bbbd5; background: #f5f8fb; color: var(--muted); }
+.post-article-footer { display: flex; align-items: flex-start; gap: 14px; margin-top: 35px; padding-top: 18px; border-top: 1px solid var(--line); }
+.post-tags-label { padding-top: 4px; color: var(--muted); font-size: 11px; font-weight: 800; letter-spacing: 1px; }
+.post-article-footer .tag-chip { cursor: default; }
+@media (max-width: 900px) {
+  .post-page-grid { grid-template-columns: 275px minmax(0, 1fr); gap: 25px; }
+}
+@media (max-width: 680px) {
+  .sidebar { position: static; }
+  .post-page-grid { display: flex; flex-direction: column; gap: 25px; }
+  .post-page-grid > .sidebar { width: 100%; }
+  .post-article { width: 100%; padding-top: 0; }
+  .post-article-header { padding-bottom: 16px; }
+  .post-article-title { font-size: 26px; }
+  .post-article-divider { margin-bottom: 22px; }
+  .post-article-body { font-size: 14px; }
+  .post-article-footer { flex-direction: column; gap: 8px; }
+}
