@@ -4,10 +4,27 @@
   const status = document.getElementById("search-status");
   const empty = document.getElementById("no-results");
   const tagButtons = document.querySelectorAll("[data-tag]");
-  if (!input || !list) return;
+  if (!input) return;
+
+  // On an individual post page, send search/tag requests to the homepage.
+  if (!list) {
+    input.addEventListener("keydown", (event) => {
+      if (event.key === "Enter" && input.value.trim()) {
+        window.location.href = "/?q=" + encodeURIComponent(input.value.trim());
+      }
+    });
+    tagButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        window.location.href = "/?tag=" + encodeURIComponent(button.dataset.tag || "");
+      });
+    });
+    return;
+  }
 
   const rows = Array.from(list.querySelectorAll("[data-post-row]"));
-  let activeTag = "";
+  const params = new URLSearchParams(window.location.search);
+  let activeTag = params.get("tag") || "";
+  input.value = params.get("q") || (activeTag ? "#" + activeTag : "");
 
   function filterPosts() {
     const query = input.value.trim().toLocaleLowerCase();
@@ -24,7 +41,7 @@
         row.textContent || ""
       ].join(" ").toLocaleLowerCase();
 
-      const matchesQuery = !query || haystack.includes(query);
+      const matchesQuery = !query || haystack.includes(query.replace(/^#/, ""));
       const matchesTag = !activeTag || tags.includes(activeTag.toLocaleLowerCase());
       const matches = matchesQuery && matchesTag;
       const show = filtering ? matches : row.dataset.initialHidden !== "true";
@@ -59,10 +76,10 @@
         item.classList.toggle("is-active", active);
         item.setAttribute("aria-pressed", String(active));
       });
-      input.value = activeTag;
+      input.value = activeTag ? "#" + activeTag : "";
       filterPosts();
     });
-    button.setAttribute("aria-pressed", "false");
+    button.setAttribute("aria-pressed", String(button.dataset.tag === activeTag));
   });
 
   filterPosts();
