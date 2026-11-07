@@ -1,4 +1,5 @@
 ---
+category_icon: bug-bounty
 layout: page
 title: Bug Bounty
 permalink: /bug-bounty/
