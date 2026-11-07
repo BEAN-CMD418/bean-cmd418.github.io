@@ -1,4 +1,5 @@
 ---
+category_icon: activities
 layout: page
 title: Activities
 permalink: /activities/
