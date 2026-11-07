@@ -4,7 +4,7 @@ title: Categories
 permalink: /categories/
 ---
 
-<p class="categories-intro">정보보안과 컴퓨터공학을 공부하며 기록한 내용을 주제별로 정리합니다.</p>
+<p class="categories-intro"></p>
 
 <div class="category-list">
   {% for category in site.data.categories %}
