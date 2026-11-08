@@ -8,4 +8,4 @@ permalink: /bug-bounty/
 
 # Bug Bounty
 
-취약점 분석과 보안 연구를 기록합니다.
+웹·시스템 취약점 발굴 및 분석 기록
