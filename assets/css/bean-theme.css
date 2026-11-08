@@ -325,7 +325,7 @@ pre { overflow-x: auto; padding: 16px; background: #f2f5f8; border: 1px solid va
 }
 .page-content .category-back-link {
   position: absolute;
-  top: -23px;
+  top: -31px;
   left: 0;
   display: inline-block;
   margin: 0;
