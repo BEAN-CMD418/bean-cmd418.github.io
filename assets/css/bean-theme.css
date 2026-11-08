@@ -343,12 +343,13 @@ pre { overflow-x: auto; padding: 16px; background: #f2f5f8; border: 1px solid va
   text-align: center;
 }
 .hero-kicker {
-  margin-bottom: 16px;
-  font-size: 15px;
+  margin: 12px 0 0;
+  font-size: 17px;
   letter-spacing: 2.2px;
 }
 .hero h1 { margin-bottom: 0; }
 .hero-art { position: absolute; right: 0; top: 20px; bottom: 20px; height: auto; opacity: .32; pointer-events: none; }
+.profile-description { grid-column: 1 / -1; margin: 14px 0 0; color: #536274; font-size: 13px; }
 .profile-career {
   grid-column: 1 / -1;
   margin-top: 13px;
@@ -357,6 +358,7 @@ pre { overflow-x: auto; padding: 16px; background: #f2f5f8; border: 1px solid va
   line-height: 1.85;
 }
 .profile-career p { margin: 0; }
+.profile-description + .profile-career { margin-top: 8px; }
 .profile-github {
   grid-column: 1 / -1;
   display: inline-flex;
@@ -372,6 +374,6 @@ pre { overflow-x: auto; padding: 16px; background: #f2f5f8; border: 1px solid va
 .profile-github:hover { color: var(--blue-deep); }
 @media (max-width: 680px) {
   .hero-copy { padding: 42px 0; }
-  .hero-kicker { font-size: 14px; }
+  .hero-kicker { font-size: 15px; }
   .hero-art { right: -100px; top: 0; bottom: 0; width: 230px; opacity: .22; }
 }
