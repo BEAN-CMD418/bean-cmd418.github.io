@@ -56,7 +56,7 @@
   </section>
   {% endif %}
 
-  <main class="page-shell {% if page.layout == 'home' %}home-shell{% endif %}">
+  <main class="page-shell {% if page.layout == 'home' %}home-shell{% endif %}{% if page.category %} category-shell{% endif %}">
     {{ content }}
   </main>
 
