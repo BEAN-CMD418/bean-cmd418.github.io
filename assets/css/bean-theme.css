@@ -334,46 +334,51 @@ pre { overflow-x: auto; padding: 16px; background: #f2f5f8; border: 1px solid va
 }
 
 
-/* Home hero alignment and profile details. */
-.hero-inner { justify-content: center; }
+/* Home hero: restore the original left-aligned text and illustration layout. */
+.hero-inner {
+  justify-content: space-between;
+}
 .hero-copy {
-  width: 100%;
-  max-width: none;
-  padding: 48px 0;
-  text-align: center;
+  position: relative;
+  z-index: 2;
+  width: auto;
+  max-width: 720px;
+  padding: 38px 0;
+  text-align: left;
 }
 .hero-kicker {
-  margin: 12px 0 0;
-  font-size: 17px;
+  margin: 0 0 14px;
+  font-size: 15px;
   letter-spacing: 2.2px;
 }
-.hero h1 { margin-bottom: 0; }
-.hero-art { position: absolute; right: 0; top: 20px; bottom: 20px; height: auto; opacity: .32; pointer-events: none; }
-.profile-description { grid-column: 1 / -1; margin: 14px 0 0; color: #536274; font-size: 13px; }
-.profile-career {
-  grid-column: 1 / -1;
-  margin-top: 13px;
-  color: #536274;
-  font-size: 12px;
-  line-height: 1.85;
+.hero h1 {
+  margin: 0 0 12px;
 }
-.profile-career p { margin: 0; }
-.profile-description + .profile-career { margin-top: 8px; }
-.profile-github {
-  grid-column: 1 / -1;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  width: fit-content;
-  margin-top: 12px;
-  color: #273444;
-  font-size: 13px;
-  font-weight: 700;
+.hero-art {
+  position: relative;
+  right: auto;
+  top: auto;
+  bottom: auto;
+  flex: 0 0 340px;
+  height: 210px;
+  align-self: stretch;
+  opacity: 1;
+  pointer-events: none;
 }
-.profile-github svg { width: 20px; height: 20px; fill: currentColor; }
-.profile-github:hover { color: var(--blue-deep); }
 @media (max-width: 680px) {
-  .hero-copy { padding: 42px 0; }
-  .hero-kicker { font-size: 15px; }
-  .hero-art { right: -100px; top: 0; bottom: 0; width: 230px; opacity: .22; }
+  .hero-copy {
+    padding: 30px 0;
+  }
+  .hero-kicker {
+    font-size: 13px;
+  }
+  .hero-art {
+    position: absolute;
+    right: -100px;
+    top: 0;
+    bottom: 0;
+    width: 230px;
+    height: auto;
+    opacity: .35;
+  }
 }
