@@ -92,6 +92,27 @@ button, input { font: inherit; }
 .profile-role { margin: 0; color: var(--muted); font-size: 13px; }
 .profile-motto { margin: 4px 0 0; color: var(--blue-deep); font-size: 11px; white-space: nowrap; }
 .profile-description { grid-column: 1 / -1; margin: 14px 0 0; color: #536274; font-size: 13px; }
+.profile-career {
+  grid-column: 1 / -1;
+  margin-top: 14px;
+  color: #3f4b59;
+  font-size: 12px;
+  line-height: 1.85;
+}
+.profile-career p { margin: 0; }
+.profile-github {
+  grid-column: 1 / -1;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  width: fit-content;
+  margin-top: 12px;
+  color: #273444;
+  font-size: 13px;
+  font-weight: 700;
+}
+.profile-github svg { display: block; width: 20px; height: 20px; flex: 0 0 20px; fill: currentColor; }
+.profile-github:hover { color: var(--blue-deep); }
 .sidebar-section { padding: 22px 0; border-bottom: 1px solid var(--line); }
 .sidebar-heading { display: flex; align-items: center; gap: 10px; margin: 0 0 13px; font-size: 17px; font-weight: 800; }
 .heading-icon { width: 19px; height: 19px; fill: none; stroke: var(--blue); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
