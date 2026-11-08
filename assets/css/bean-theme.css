@@ -326,3 +326,9 @@ pre { overflow-x: auto; padding: 16px; background: #f2f5f8; border: 1px solid va
 .category-detail-body .category-post-section {
   margin-top: 32px;
 }
+
+
+/* Pull the category-page content closer to the site header. */
+.page-shell.category-shell {
+  padding-top: 24px;
+}
