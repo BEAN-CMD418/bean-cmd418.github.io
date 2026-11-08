@@ -319,12 +319,16 @@ pre { overflow-x: auto; padding: 16px; background: #f2f5f8; border: 1px solid va
 }
 
 
-/* Simple return link on individual category pages. */
-.page-content .category-back-link {
-  display: inline-block;
+/* Keep the category heading aligned with the Categories index heading. */
+.page-content:has(.category-back-link) {
   position: relative;
-  top: -3px;
-  margin: 0 0 -4px;
+}
+.page-content .category-back-link {
+  position: absolute;
+  top: -23px;
+  left: 0;
+  display: inline-block;
+  margin: 0;
   color: var(--blue-deep);
   font-size: 13px;
   font-weight: 700;
@@ -351,9 +355,14 @@ pre { overflow-x: auto; padding: 16px; background: #f2f5f8; border: 1px solid va
 }
 
 
-/* Pull the category-page content closer to the site header. */
+/* Match the top offset of the Categories index page exactly. */
 .page-shell.category-shell {
-  padding-top: 24px;
+  padding-top: 42px;
+}
+@media (max-width: 680px) {
+  .page-shell.category-shell {
+    padding-top: 25px;
+  }
 }
 
 
