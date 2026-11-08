@@ -322,7 +322,9 @@ pre { overflow-x: auto; padding: 16px; background: #f2f5f8; border: 1px solid va
 /* Simple return link on individual category pages. */
 .page-content .category-back-link {
   display: inline-block;
-  margin: 0 0 18px;
+  position: relative;
+  top: -3px;
+  margin: 0 0 -4px;
   color: var(--blue-deep);
   font-size: 13px;
   font-weight: 700;
