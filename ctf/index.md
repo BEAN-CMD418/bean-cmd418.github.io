@@ -8,4 +8,4 @@ permalink: /ctf/
 
 # CTF / Wargame
 
-CTF 문제 풀이와 워게임 학습 기록입니다.
+CTF 문제 풀이 및 워게임 실습 기록
