@@ -332,3 +332,46 @@ pre { overflow-x: auto; padding: 16px; background: #f2f5f8; border: 1px solid va
 .page-shell.category-shell {
   padding-top: 24px;
 }
+
+
+/* Home hero alignment and profile details. */
+.hero-inner { justify-content: center; }
+.hero-copy {
+  width: 100%;
+  max-width: none;
+  padding: 48px 0;
+  text-align: center;
+}
+.hero-kicker {
+  margin-bottom: 16px;
+  font-size: 15px;
+  letter-spacing: 2.2px;
+}
+.hero h1 { margin-bottom: 0; }
+.hero-art { position: absolute; right: 0; top: 20px; bottom: 20px; height: auto; opacity: .32; pointer-events: none; }
+.profile-career {
+  grid-column: 1 / -1;
+  margin-top: 13px;
+  color: #536274;
+  font-size: 12px;
+  line-height: 1.85;
+}
+.profile-career p { margin: 0; }
+.profile-github {
+  grid-column: 1 / -1;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  width: fit-content;
+  margin-top: 12px;
+  color: #273444;
+  font-size: 13px;
+  font-weight: 700;
+}
+.profile-github svg { width: 20px; height: 20px; fill: currentColor; }
+.profile-github:hover { color: var(--blue-deep); }
+@media (max-width: 680px) {
+  .hero-copy { padding: 42px 0; }
+  .hero-kicker { font-size: 14px; }
+  .hero-art { right: -100px; top: 0; bottom: 0; width: 230px; opacity: .22; }
+}
