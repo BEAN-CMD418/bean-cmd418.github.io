@@ -1,6 +1,40 @@
 (() => {
-  // Briefly fade the current page before same-site navigation.
+  // A single underline glides between the primary navigation links.
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const nav = document.querySelector(".main-nav");
+  let navIndicator = null;
+
+  if (nav) {
+    const navLinks = Array.from(nav.querySelectorAll("a[href]"));
+    const activeLink = navLinks.find((link) => link.getAttribute("aria-current") === "page");
+    navIndicator = document.createElement("span");
+    navIndicator.className = "main-nav-indicator";
+    navIndicator.setAttribute("aria-hidden", "true");
+    nav.appendChild(navIndicator);
+
+    const moveIndicator = (link, moving = false) => {
+      if (!link) return;
+      navIndicator.style.setProperty("--nav-indicator-x", link.offsetLeft + "px");
+      navIndicator.style.setProperty("--nav-indicator-width", link.offsetWidth + "px");
+      navIndicator.classList.toggle("is-moving", moving);
+    };
+
+    moveIndicator(activeLink);
+    window.addEventListener("resize", () => {
+      const current = navLinks.find((link) =>
+        link.getAttribute("aria-current") === "page"
+      );
+      if (!navIndicator.classList.contains("is-moving")) moveIndicator(current);
+    });
+
+    navLinks.forEach((link) => {
+      link.addEventListener("click", () => {
+        if (!reduceMotion) moveIndicator(link, true);
+      });
+    });
+  }
+
+  // Briefly fade the current page before same-site navigation.
   let navigating = false;
 
   if (!reduceMotion) {
@@ -25,8 +59,22 @@
 
       event.preventDefault();
       navigating = true;
-      document.body.classList.add("is-leaving");
-      window.setTimeout(() => window.location.assign(destination.href), 145);
+      const isPrimaryNav = link.closest(".main-nav");
+      if (isPrimaryNav) {
+        if (navIndicator) {
+          const navLinks = Array.from(nav.querySelectorAll("a[href]"));
+          navLinks.forEach((item) => item.removeAttribute("aria-current"));
+          link.setAttribute("aria-current", "page");
+          navIndicator.classList.add("is-moving");
+          navIndicator.style.setProperty("--nav-indicator-x", link.offsetLeft + "px");
+          navIndicator.style.setProperty("--nav-indicator-width", link.offsetWidth + "px");
+        }
+        window.setTimeout(() => document.body.classList.add("is-leaving"), 300);
+        window.setTimeout(() => window.location.assign(destination.href), 470);
+      } else {
+        document.body.classList.add("is-leaving");
+        window.setTimeout(() => window.location.assign(destination.href), 145);
+      }
     });
   }
 
