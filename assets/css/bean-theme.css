@@ -476,14 +476,26 @@ body.is-leaving .page-shell { animation: bean-page-leave .14s ease-in both; }
 .category-node[open] .category-chevron {
   transform: rotate(180deg);
 }
+/* Reveal the nested category link only when its accordion opens. */
 .category-children {
-  animation: category-children-in .22s cubic-bezier(.22,.61,.36,1) both;
+  transform-origin: top center;
+}
+.category-node[open] > .category-children {
+  animation: category-children-in .32s .04s cubic-bezier(.2,.7,.25,1) both;
 }
 @keyframes category-children-in {
-  from { opacity: 0; transform: translateY(-4px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(-7px) scaleY(.94);
+    clip-path: inset(0 0 18% 0);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scaleY(1);
+    clip-path: inset(0 0 0 0);
+  }
 }
 @media (prefers-reduced-motion: reduce) {
   .category-chevron { transition: none !important; }
-  .category-children { animation: none !important; }
+  .category-node[open] > .category-children { animation: none !important; }
 }
