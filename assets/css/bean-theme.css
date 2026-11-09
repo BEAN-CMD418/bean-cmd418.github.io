@@ -739,3 +739,34 @@ body.is-leaving .page-shell { animation: bean-page-leave .14s ease-in both; }
 @media (prefers-reduced-motion: reduce) {
   .hero-sparkle { animation: none !important; opacity: .65; }
 }
+
+
+/* Small, centered photo pair on the About Me page. */
+.about-photos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin: 24px auto 30px;
+}
+.about-photos img {
+  display: block;
+  width: 112px;
+  height: 112px;
+  object-fit: cover;
+  border-radius: 14px;
+  border: 1px solid rgba(220, 229, 237, .9);
+  box-shadow: 0 4px 14px rgba(32, 58, 89, .08);
+}
+@media (max-width: 680px) {
+  .about-photos {
+    gap: 12px;
+    margin: 20px auto 26px;
+  }
+  .about-photos img {
+    width: 100px;
+    height: 100px;
+    border-radius: 12px;
+  }
+}
