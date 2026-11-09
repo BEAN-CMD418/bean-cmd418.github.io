@@ -624,3 +624,44 @@ body.is-leaving .page-shell { animation: bean-page-leave .14s ease-in both; }
     transition: none !important;
   }
 }
+
+
+/* Gentle motion for the home security illustration. */
+@keyframes hero-window-float {
+  0%, 100% { transform: perspective(500px) rotateY(-13deg) rotateX(4deg) translateY(0); }
+  50% { transform: perspective(500px) rotateY(-13deg) rotateX(4deg) translateY(-7px); }
+}
+@keyframes hero-grid-drift {
+  from { background-position: 0 0; }
+  to { background-position: 105px 70px; }
+}
+@keyframes hero-orbit-pulse {
+  0%, 100% { opacity: .55; transform: scale(.82); box-shadow: 0 0 0 0 rgba(216,237,255,0); }
+  50% { opacity: 1; transform: scale(1.2); box-shadow: 0 0 0 5px rgba(216,237,255,.12); }
+}
+@keyframes hero-lock-glow {
+  0%, 100% { opacity: .82; filter: drop-shadow(0 0 0 rgba(185,221,248,0)); }
+  50% { opacity: 1; filter: drop-shadow(0 0 8px rgba(185,221,248,.55)); }
+}
+.hero-window {
+  animation: hero-window-float 5.5s ease-in-out infinite;
+  will-change: transform;
+}
+.hero-grid {
+  animation: hero-grid-drift 22s linear infinite;
+}
+.window-lock {
+  animation: hero-lock-glow 3.8s ease-in-out infinite;
+}
+.hero-orbit {
+  animation: hero-orbit-pulse 3.2s ease-in-out infinite;
+}
+.orbit-two {
+  animation-delay: 1.6s;
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-window, .hero-grid, .window-lock, .hero-orbit {
+    animation: none !important;
+    will-change: auto;
+  }
+}
