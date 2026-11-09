@@ -669,24 +669,32 @@ body.is-leaving .page-shell { animation: bean-page-leave .14s ease-in both; }
   position: absolute;
   left: 50%;
   top: 50%;
-  width: 310px;
-  height: 112px;
-  border: 1px solid rgba(222, 241, 255, .38);
+  width: 238px;
+  height: 82px;
+  border: 1px solid rgba(222, 241, 255, .42);
   border-radius: 50%;
   pointer-events: none;
   transform-origin: center;
+  background:
+    radial-gradient(circle at 16% 50%, #fff 0 1.15px, rgba(255,255,255,.25) 1.5px, transparent 3.2px),
+    radial-gradient(circle at 51% 0%, #fff 0 1px, transparent 3px),
+    radial-gradient(circle at 84% 50%, rgba(255,255,255,.95) 0 1.1px, transparent 3px);
 }
 .hero-art::before {
-  animation: hero-ring-rotate 18s linear infinite;
-  box-shadow: 0 0 8px rgba(199, 229, 255, .12);
+  animation: hero-ring-rotate 21s linear infinite, hero-ring-shimmer 3.6s ease-in-out infinite;
+  box-shadow: 0 0 7px rgba(199, 229, 255, .2), inset 0 0 5px rgba(199, 229, 255, .08);
 }
 .hero-art::after {
-  width: 286px;
-  height: 94px;
-  border-color: rgba(222, 241, 255, .22);
-  border-top-color: rgba(255, 255, 255, .95);
-  border-bottom-color: rgba(255, 255, 255, .58);
-  animation: hero-ring-rotate 12s linear infinite reverse, hero-ring-shimmer 4.5s ease-in-out infinite;
+  width: 216px;
+  height: 68px;
+  border-color: rgba(222, 241, 255, .24);
+  border-top-color: rgba(255, 255, 255, .82);
+  border-bottom-color: rgba(255, 255, 255, .5);
+  background:
+    radial-gradient(circle at 28% 0%, #fff 0 1.3px, transparent 3.3px),
+    radial-gradient(circle at 72% 100%, #fff 0 1px, transparent 3px);
+  animation: hero-ring-rotate 16s linear infinite reverse, hero-ring-shimmer 2.8s ease-in-out infinite;
+  box-shadow: 0 0 9px rgba(220, 240, 255, .16);
 }
 .hero-orbit { display: none; }
 @media (prefers-reduced-motion: reduce) {
