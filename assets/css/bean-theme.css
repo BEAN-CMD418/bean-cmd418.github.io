@@ -635,9 +635,14 @@ body.is-leaving .page-shell { animation: bean-page-leave .14s ease-in both; }
   from { background-position: 0 0; }
   to { background-position: 105px 70px; }
 }
-@keyframes hero-orbit-pulse {
-  0%, 100% { opacity: .55; transform: scale(.82); box-shadow: 0 0 0 0 rgba(216,237,255,0); }
-  50% { opacity: 1; transform: scale(1.2); box-shadow: 0 0 0 5px rgba(216,237,255,.12); }
+@keyframes hero-ring-rotate {
+  from { transform: translate(-50%, -50%) rotate(-22deg) rotateY(58deg) rotateZ(0deg); }
+  to { transform: translate(-50%, -50%) rotate(-22deg) rotateY(58deg) rotateZ(360deg); }
+}
+@keyframes hero-ring-shimmer {
+  0%, 100% { opacity: .35; filter: brightness(1); }
+  45% { opacity: .9; filter: brightness(1.65); }
+  70% { opacity: .5; filter: brightness(1.15); }
 }
 @keyframes hero-lock-glow {
   0%, 100% { opacity: .82; filter: drop-shadow(0 0 0 rgba(185,221,248,0)); }
@@ -653,14 +658,39 @@ body.is-leaving .page-shell { animation: bean-page-leave .14s ease-in both; }
 .window-lock {
   animation: hero-lock-glow 3.8s ease-in-out infinite;
 }
-.hero-orbit {
-  animation: hero-orbit-pulse 3.2s ease-in-out infinite;
+.hero-window {
+  position: relative;
+  z-index: 2;
 }
-.orbit-two {
-  animation-delay: 1.6s;
+/* Thin Saturn-like rings with a traveling highlight; no expanding dots. */
+.hero-art::before,
+.hero-art::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 310px;
+  height: 112px;
+  border: 1px solid rgba(222, 241, 255, .38);
+  border-radius: 50%;
+  pointer-events: none;
+  transform-origin: center;
 }
+.hero-art::before {
+  animation: hero-ring-rotate 18s linear infinite;
+  box-shadow: 0 0 8px rgba(199, 229, 255, .12);
+}
+.hero-art::after {
+  width: 286px;
+  height: 94px;
+  border-color: rgba(222, 241, 255, .22);
+  border-top-color: rgba(255, 255, 255, .95);
+  border-bottom-color: rgba(255, 255, 255, .58);
+  animation: hero-ring-rotate 12s linear infinite reverse, hero-ring-shimmer 4.5s ease-in-out infinite;
+}
+.hero-orbit { display: none; }
 @media (prefers-reduced-motion: reduce) {
-  .hero-window, .hero-grid, .window-lock, .hero-orbit {
+  .hero-window, .hero-grid, .window-lock, .hero-orbit, .hero-art::before, .hero-art::after {
     animation: none !important;
     will-change: auto;
   }
