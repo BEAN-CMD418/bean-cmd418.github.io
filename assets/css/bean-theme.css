@@ -45,9 +45,6 @@ button, input { font: inherit; }
 .main-nav { display: flex; align-items: center; gap: 36px; }
 .main-nav a { position: relative; padding: 29px 0 26px; color: #3e4a57; font-size: 14px; }
 .main-nav a:hover, .main-nav a[aria-current="page"] { color: var(--blue-deep); }
-.main-nav a[aria-current="page"]::after {
-  content: ""; position: absolute; bottom: 17px; left: 0; right: 0; height: 2px; background: var(--blue);
-}
 .hero { overflow: hidden; background: #2478b9; color: #fff; }
 .hero-inner {
   width: min(var(--content-width), calc(100% - 64px)); min-height: 250px;
@@ -226,7 +223,6 @@ pre { overflow-x: auto; padding: 16px; background: #f2f5f8; border: 1px solid va
   .brand-mark img { width: 29px; height: 29px; }
   .main-nav { width: 100%; justify-content: space-between; gap: 15px; }
   .main-nav a { padding: 12px 0 14px; font-size: 12px; }
-  .main-nav a[aria-current="page"]::after { bottom: 7px; }
   .hero-inner { min-height: 205px; }
   .hero-copy { padding: 30px 0; }
   .hero h1 { font-size: calc(30px + 2pt); }
