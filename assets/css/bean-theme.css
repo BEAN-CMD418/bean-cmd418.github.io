@@ -227,8 +227,8 @@ pre { overflow-x: auto; padding: 16px; background: #f2f5f8; border: 1px solid va
   .hero-copy { padding: 30px 0; }
   .hero h1 { font-size: calc(30px + 2pt); }
   .hero-copy > p:last-child { max-width: 290px; font-size: calc(13px + 2pt); }
-  .hero-art { position: absolute; right: -100px; width: 230px; opacity: .35; }
-  .hero-window { right: 30px; transform: scale(.8); }
+  .hero-art { position: absolute; right: -35px; width: 230px; opacity: .35; overflow: visible; }
+  .hero-window { left: 50%; right: auto; top: 50%; width: 150px; height: 108px; }
   .page-shell { padding-top: 25px; }
   .home-grid { display: flex; flex-direction: column; gap: 25px; }
   .sidebar { padding: 0; border: 0; }
@@ -648,7 +648,18 @@ body.is-leaving .page-shell { animation: bean-page-leave .14s ease-in both; }
   0%, 100% { opacity: .82; filter: drop-shadow(0 0 0 rgba(185,221,248,0)); }
   50% { opacity: 1; filter: drop-shadow(0 0 8px rgba(185,221,248,.55)); }
 }
+@keyframes hero-window-float {
+  0%, 100% { transform: translate(-50%, -50%) perspective(500px) rotateY(-13deg) rotateX(4deg); }
+  50% { transform: translate(-50%, calc(-50% - 6px)) perspective(500px) rotateY(-13deg) rotateX(4deg); }
+}
+.hero-art { overflow: visible; }
 .hero-window {
+  left: 50%;
+  right: auto;
+  top: 50%;
+  width: 178px;
+  height: 128px;
+  transform: translate(-50%, -50%) perspective(500px) rotateY(-13deg) rotateX(4deg);
   animation: hero-window-float 5.5s ease-in-out infinite;
   will-change: transform;
 }
