@@ -36,7 +36,7 @@ button, input { font: inherit; }
   justify-content: space-between;
   gap: 32px;
 }
-.site-brand { display: inline-flex; align-items: center; gap: 13px; font-size: 22px; font-weight: 800; letter-spacing: -.7px; }
+.site-brand { display: inline-flex; align-items: center; gap: 13px; font-size: 23px; font-weight: 800; letter-spacing: -.7px; }
 .brand-mark {
   width: 40px; height: 40px; flex: 0 0 40px; display: grid; place-items: center;
   border-radius: 50%; background: var(--blue-soft); overflow: hidden;
@@ -218,7 +218,7 @@ pre { overflow-x: auto; padding: 16px; background: #f2f5f8; border: 1px solid va
 @media (max-width: 680px) {
   .header-inner, .hero-inner, .page-shell, .footer-inner { width: min(100% - 36px, var(--content-width)); }
   .header-inner { min-height: 68px; flex-wrap: wrap; gap: 0; padding: 12px 0 0; }
-  .site-brand { font-size: 17px; }
+  .site-brand { font-size: 18px; }
   .brand-mark { width: 34px; height: 34px; flex-basis: 34px; }
   .brand-mark img { width: 29px; height: 29px; }
   .main-nav { width: 100%; justify-content: space-between; gap: 15px; }
