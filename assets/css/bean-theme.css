@@ -716,40 +716,26 @@ body.is-leaving .page-shell { animation: bean-page-leave .14s ease-in both; }
 }
 
 
-/* Tiny four-point stars resting along the Saturn-like orbit. */
-@keyframes hero-star-twinkle {
-  0%, 100% { opacity: .38; filter: brightness(1); }
-  45% { opacity: 1; filter: brightness(1.9) drop-shadow(0 0 4px rgba(255,255,255,.95)); }
-  65% { opacity: .68; filter: brightness(1.25); }
+/* Tiny round glints along the outer orbit, kept clear of the lock window. */
+@keyframes hero-dot-twinkle {
+  0%, 100% { opacity: .22; box-shadow: 0 0 1px rgba(255,255,255,.25); }
+  48% { opacity: .95; box-shadow: 0 0 4px 1px rgba(255,255,255,.72); }
+  68% { opacity: .42; box-shadow: 0 0 2px rgba(255,255,255,.4); }
 }
 .hero-sparkle {
   position: absolute;
-  z-index: 4;
-  width: 10px;
-  height: 10px;
+  z-index: 3;
+  width: 2px;
+  height: 2px;
+  border-radius: 50%;
+  background: #fff;
   pointer-events: none;
-  animation: hero-star-twinkle 3.4s ease-in-out infinite;
+  animation: hero-dot-twinkle 3.1s ease-in-out infinite;
 }
-.hero-sparkle::before,
-.hero-sparkle::after {
-  content: "";
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  display: block;
-  background: rgba(255,255,255,.96);
-  border-radius: 2px;
-  transform: translate(-50%, -50%);
-}
-.hero-sparkle::before { width: 1.5px; height: 10px; }
-.hero-sparkle::after { width: 10px; height: 1.5px; }
-.sparkle-one { left: 17%; top: 49%; animation-delay: .2s; }
-.sparkle-two { left: 78%; top: 27%; width: 8px; height: 8px; animation-delay: 1.3s; }
-.sparkle-two::before { height: 8px; }
-.sparkle-two::after { width: 8px; }
-.sparkle-three { left: 73%; top: 76%; width: 7px; height: 7px; animation-delay: 2.1s; }
-.sparkle-three::before { height: 7px; }
-.sparkle-three::after { width: 7px; }
+.sparkle-one { left: 13%; top: 30%; animation-delay: .1s; }
+.sparkle-two { left: 87%; top: 30%; animation-delay: 1.2s; }
+.sparkle-three { left: 13%; top: 70%; animation-delay: 2.0s; }
+.sparkle-four { left: 87%; top: 70%; animation-delay: 2.6s; }
 @media (prefers-reduced-motion: reduce) {
-  .hero-sparkle { animation: none !important; opacity: .75; }
+  .hero-sparkle { animation: none !important; opacity: .65; }
 }
