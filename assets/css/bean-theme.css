@@ -716,26 +716,26 @@ body.is-leaving .page-shell { animation: bean-page-leave .14s ease-in both; }
 }
 
 
-/* Tiny round glints along the outer orbit, kept clear of the lock window. */
+/* Small, irregularly scattered glints around the orbit. */
 @keyframes hero-dot-twinkle {
-  0%, 100% { opacity: .22; box-shadow: 0 0 1px rgba(255,255,255,.25); }
-  48% { opacity: .95; box-shadow: 0 0 4px 1px rgba(255,255,255,.72); }
-  68% { opacity: .42; box-shadow: 0 0 2px rgba(255,255,255,.4); }
+  0%, 100% { opacity: .24; box-shadow: 0 0 1px rgba(255,255,255,.25); }
+  46% { opacity: 1; box-shadow: 0 0 5px 1px rgba(255,255,255,.82); }
+  72% { opacity: .48; box-shadow: 0 0 2px rgba(255,255,255,.42); }
 }
 .hero-sparkle {
   position: absolute;
   z-index: 3;
-  width: 2px;
-  height: 2px;
+  width: 3px;
+  height: 3px;
   border-radius: 50%;
   background: #fff;
   pointer-events: none;
-  animation: hero-dot-twinkle 3.1s ease-in-out infinite;
+  animation: hero-dot-twinkle 3.3s ease-in-out infinite;
 }
-.sparkle-one { left: 13%; top: 30%; animation-delay: .1s; }
-.sparkle-two { left: 87%; top: 30%; animation-delay: 1.2s; }
-.sparkle-three { left: 13%; top: 70%; animation-delay: 2.0s; }
-.sparkle-four { left: 87%; top: 70%; animation-delay: 2.6s; }
+.sparkle-one { left: 11%; top: 34%; animation-delay: .2s; }
+.sparkle-two { left: 84%; top: 23%; width: 2.5px; height: 2.5px; animation-delay: 1.35s; }
+.sparkle-three { left: 19%; top: 73%; width: 3.5px; height: 3.5px; animation-delay: 2.1s; }
+.sparkle-four { left: 91%; top: 62%; width: 2.5px; height: 2.5px; animation-delay: .85s; }
 @media (prefers-reduced-motion: reduce) {
   .hero-sparkle { animation: none !important; opacity: .65; }
 }
