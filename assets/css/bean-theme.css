@@ -329,10 +329,23 @@ pre { overflow-x: auto; padding: 16px; background: #f2f5f8; border: 1px solid va
   font-size: 13px;
   font-weight: 700;
   text-decoration: none !important;
+  transition: color .18s ease;
 }
-.page-content .category-back-link:hover {
-  color: var(--blue);
-  text-decoration: none;
+.page-content .category-back-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -3px;
+  height: 1px;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform .2s ease;
+}
+.page-content .category-back-link:hover::after,
+.page-content .category-back-link:focus-visible::after {
+  transform: scaleX(1);
 }
 
 
@@ -498,4 +511,9 @@ body.is-leaving .page-shell { animation: bean-page-leave .14s ease-in both; }
 @media (prefers-reduced-motion: reduce) {
   .category-chevron { transition: none !important; }
   .category-node[open] > .category-children { animation: none !important; }
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+  .page-content .category-back-link::after { transition: none !important; }
 }
