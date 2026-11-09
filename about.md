@@ -9,8 +9,8 @@ permalink: /about/
 정보보안을 공부하고 있는 대학생입니다.
 
 <div class="about-photos" aria-label="About Me photos">
-  <img src="/assets/20250610_013341.jpg" alt="About Me photo 1">
-  <img src="/assets/20250815_002147.jpg" alt="About Me photo 2">
+  <img src="/assets/20250815_002147.jpg" alt="About Me photo 1">
+  <img src="/assets/20250610_013341.jpg" alt="About Me photo 2">
 </div>
 
 ## Interests
