@@ -1,4 +1,35 @@
 (() => {
+  // Briefly fade the current page before same-site navigation.
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  let navigating = false;
+
+  if (!reduceMotion) {
+    document.addEventListener("click", (event) => {
+      if (event.defaultPrevented || event.button !== 0 ||
+          event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+
+      const clicked = event.target instanceof Element ? event.target : event.target.parentElement;
+      const link = clicked && clicked.closest("a[href]");
+      if (!link || link.hasAttribute("download") ||
+          (link.target && link.target !== "_self")) return;
+
+      const destination = new URL(link.href, window.location.href);
+      if (destination.origin !== window.location.origin) return;
+      if (destination.pathname === window.location.pathname &&
+          destination.search === window.location.search &&
+          destination.hash === window.location.hash) return;
+      if (navigating) {
+        event.preventDefault();
+        return;
+      }
+
+      event.preventDefault();
+      navigating = true;
+      document.body.classList.add("is-leaving");
+      window.setTimeout(() => window.location.assign(destination.href), 145);
+    });
+  }
+
   const input = document.getElementById("post-search");
   const list = document.getElementById("post-list");
   const status = document.getElementById("search-status");
