@@ -1,5 +1,5 @@
 (() => {
-  // A single underline glides between the primary navigation links.
+  // One solid underline: set its initial position silently, then animate only on click.
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   const nav = document.querySelector(".main-nav");
   let navIndicator = null;
@@ -12,25 +12,21 @@
     navIndicator.setAttribute("aria-hidden", "true");
     nav.appendChild(navIndicator);
 
-    const moveIndicator = (link, moving = false) => {
+    const setIndicator = (link) => {
       if (!link) return;
       navIndicator.style.setProperty("--nav-indicator-x", link.offsetLeft + "px");
       navIndicator.style.setProperty("--nav-indicator-width", link.offsetWidth + "px");
-      navIndicator.classList.toggle("is-moving", moving);
     };
 
-    moveIndicator(activeLink);
+    // No transition on page load: prevents a second underline movement after navigation.
+    setIndicator(activeLink);
+    requestAnimationFrame(() => navIndicator.classList.add("is-ready"));
+
     window.addEventListener("resize", () => {
       const current = navLinks.find((link) =>
         link.getAttribute("aria-current") === "page"
       );
-      if (!navIndicator.classList.contains("is-moving")) moveIndicator(current);
-    });
-
-    navLinks.forEach((link) => {
-      link.addEventListener("click", () => {
-        if (!reduceMotion) moveIndicator(link, true);
-      });
+      setIndicator(current);
     });
   }
 
@@ -61,11 +57,10 @@
       navigating = true;
       const isPrimaryNav = link.closest(".main-nav");
       if (isPrimaryNav) {
-        if (navIndicator) {
+        if (navIndicator && !reduceMotion) {
           const navLinks = Array.from(nav.querySelectorAll("a[href]"));
           navLinks.forEach((item) => item.removeAttribute("aria-current"));
           link.setAttribute("aria-current", "page");
-          navIndicator.classList.add("is-moving");
           navIndicator.style.setProperty("--nav-indicator-x", link.offsetLeft + "px");
           navIndicator.style.setProperty("--nav-indicator-width", link.offsetWidth + "px");
         }
