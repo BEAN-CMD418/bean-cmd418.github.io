@@ -583,3 +583,37 @@ body.is-leaving .page-shell { animation: bean-page-leave .14s ease-in both; }
   padding-top: 20px;
   border-top: 1px solid var(--line);
 }
+
+
+/* Back link on individual posts, matching the category page interaction. */
+.post-article .post-category-back-link {
+  position: relative;
+  display: inline-block;
+  margin: 0 0 18px;
+  color: var(--blue-deep);
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none !important;
+  transition: color .18s ease;
+}
+.post-article .post-category-back-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -3px;
+  height: 1px;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform .2s ease;
+}
+.post-article .post-category-back-link:hover::after,
+.post-article .post-category-back-link:focus-visible::after {
+  transform: scaleX(1);
+}
+@media (prefers-reduced-motion: reduce) {
+  .post-article .post-category-back-link::after {
+    transition: none !important;
+  }
+}
