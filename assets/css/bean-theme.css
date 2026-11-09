@@ -294,9 +294,10 @@ pre { overflow-x: auto; padding: 16px; background: #f2f5f8; border: 1px solid va
 .post-article-footer .tag-chip { cursor: default; }
 @media (max-width: 900px) {
   .post-page-grid { grid-template-columns: 275px minmax(0, 1fr); gap: 25px; }
+  .post-article .post-category-back-link { left: calc(275px + 25px); }
 }
 @media (max-width: 680px) {
-  .post-article .post-category-back-link { top: -31px; }
+  .post-article .post-category-back-link { top: -31px; left: 0; }
   .sidebar { position: static; }
   .post-page-grid { display: flex; flex-direction: column; gap: 25px; }
   .post-page-grid > .sidebar { width: 100%; }
@@ -586,16 +587,15 @@ body.is-leaving .page-shell { animation: bean-page-leave .14s ease-in both; }
 }
 
 
-/* Align the post back link with the category page back link.
-   The desktop article has 4px top padding; compensate for it so both links
-   share the same vertical coordinate. */
-.post-article {
+/* Use the post grid as the same vertical positioning reference
+   used by .page-content on category pages. */
+.post-page-grid {
   position: relative;
 }
 .post-article .post-category-back-link {
   position: absolute;
-  top: -35px;
-  left: 0;
+  top: -31px;
+  left: calc(330px + 34px);
   display: inline-block;
   margin: 0;
   color: var(--blue-deep);
