@@ -575,3 +575,11 @@ body.is-leaving .page-shell { animation: bean-page-leave .14s ease-in both; }
   .post-article-body { font-size: 15px; }
   .post-article-body h3 { font-size: 17px; }
 }
+
+
+/* Separate the category description from its post list with a subtle divider. */
+.category-detail-body .category-post-section {
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+}
