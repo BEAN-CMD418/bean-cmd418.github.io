@@ -427,20 +427,40 @@ pre { overflow-x: auto; padding: 16px; background: #f2f5f8; border: 1px solid va
 }
 .hero { animation: bean-page-arrive .42s cubic-bezier(.2,.65,.3,1) both; }
 .page-shell { animation: bean-page-arrive .44s .04s cubic-bezier(.2,.65,.3,1) both; }
+.main-nav {
+  position: relative;
+}
 .main-nav a { transition: color .18s ease; }
-.main-nav a::after {
+.main-nav-indicator {
+  position: absolute;
+  left: 0;
+  bottom: 17px;
+  width: var(--nav-indicator-width, 0px);
+  height: 2px;
+  border-radius: 2px;
+  background: var(--blue);
+  transform: translateX(var(--nav-indicator-x, 0px));
+  transform-origin: left center;
+  transition:
+    transform .46s cubic-bezier(.65, 0, .25, 1),
+    width .46s cubic-bezier(.65, 0, .25, 1);
+  pointer-events: none;
+  z-index: 2;
+}
+.main-nav-indicator::after {
   content: "";
   position: absolute;
-  bottom: 17px;
-  left: 0;
-  right: 0;
-  height: 2px;
-  background: var(--blue);
-  transform: scaleX(0);
-  transform-origin: left center;
-  transition: transform .22s cubic-bezier(.2,.65,.3,1);
+  top: 0;
+  right: 100%;
+  width: 20px;
+  height: 100%;
+  background: linear-gradient(to left, rgba(71, 127, 174, .32), transparent);
+  opacity: .8;
+  transition: opacity .2s ease;
 }
-.main-nav a[aria-current="page"]::after { transform: scaleX(1); }
+.main-nav-indicator.is-moving {
+  filter: drop-shadow(0 0 2px rgba(71, 127, 174, .22));
+}
 .post-row { transition: background-color .18s ease, transform .18s ease; }
 .post-row:hover { transform: translateX(3px); }
 .category-list-item {
@@ -449,7 +469,7 @@ pre { overflow-x: auto; padding: 16px; background: #f2f5f8; border: 1px solid va
 body.is-leaving .hero,
 body.is-leaving .page-shell { animation: bean-page-leave .14s ease-in both; }
 @media (max-width: 680px) {
-  .main-nav a::after { bottom: 7px; }
+  .main-nav-indicator { bottom: 7px; }
 }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
@@ -457,7 +477,7 @@ body.is-leaving .page-shell { animation: bean-page-leave .14s ease-in both; }
   body.is-leaving .hero, body.is-leaving .page-shell {
     animation: none !important;
   }
-  .main-nav a, .main-nav a::after, .post-row, .category-list-item {
+  .main-nav a, .main-nav-indicator, .main-nav-indicator::after, .post-row, .category-list-item {
     transition: none !important;
   }
   .post-row:hover, .category-list-item:hover { transform: none; }
