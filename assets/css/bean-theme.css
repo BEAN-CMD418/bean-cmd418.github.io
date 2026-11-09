@@ -294,7 +294,6 @@ pre { overflow-x: auto; padding: 16px; background: #f2f5f8; border: 1px solid va
 .post-article-footer .tag-chip { cursor: default; }
 @media (max-width: 900px) {
   .post-page-grid { grid-template-columns: 275px minmax(0, 1fr); gap: 25px; }
-  .post-article .post-category-back-link { left: calc(275px + 25px); }
 }
 @media (max-width: 680px) {
   .post-article .post-category-back-link { top: -31px; left: 0; }
@@ -595,7 +594,7 @@ body.is-leaving .page-shell { animation: bean-page-leave .14s ease-in both; }
 .post-article .post-category-back-link {
   position: absolute;
   top: -31px;
-  left: calc(330px + 34px);
+  left: 0;
   display: inline-block;
   margin: 0;
   color: var(--blue-deep);
