@@ -517,3 +517,61 @@ body.is-leaving .page-shell { animation: bean-page-leave .14s ease-in both; }
 @media (prefers-reduced-motion: reduce) {
   .page-content .category-back-link::after { transition: none !important; }
 }
+
+
+/* Slightly improve overall readability without changing the visual hierarchy. */
+.main-nav a { font-size: 15px; }
+.profile-role { font-size: 14px; }
+.profile-motto { font-size: 12px; }
+.profile-description { font-size: 14px; }
+.profile-career { font-size: 13px; }
+.profile-github { font-size: 14px; }
+.sidebar-heading { font-size: 18px; }
+.search-box input { font-size: 14px; }
+.search-hint { font-size: 12px; }
+.tag-chip { font-size: 13px; }
+.muted-note { font-size: 13px; }
+.category-number { font-size: 17px; }
+.category-name { font-size: 16px; }
+.category-children a { font-size: 13px; }
+.more-link { font-size: 13px; }
+.post-category { font-size: 12px; }
+.post-meta-line time { font-size: 12px; }
+.post-main p { font-size: 14px; }
+.empty-posts p, .no-results { font-size: 14px; }
+.categories-intro { font-size: 15px; }
+.category-list-title { font-size: 17px; }
+.category-list-description { font-size: 13px; }
+.page-body { font-size: 16px; }
+.page-body h2 { font-size: 21px; }
+.footer-inner { font-size: 12px; }
+.post-article-meta { font-size: 13px; }
+.post-article-body { font-size: 16px; }
+.post-article-body h2 { font-size: 21px; }
+.post-article-body h3 { font-size: 18px; }
+.post-tags-label { font-size: 12px; }
+
+@media (max-width: 680px) {
+  .main-nav a { font-size: 13px; }
+  .profile-role { font-size: 13px; }
+  .profile-motto { font-size: 11px; }
+  .profile-description { font-size: 13px; }
+  .profile-career { font-size: 12px; }
+  .profile-github { font-size: 13px; }
+  .sidebar-heading { font-size: 17px; }
+  .search-box input { font-size: 13px; }
+  .search-hint { font-size: 11px; }
+  .tag-chip { font-size: 12px; }
+  .category-number { font-size: 16px; }
+  .category-name { font-size: 15px; }
+  .category-children a { font-size: 13px; }
+  .post-category, .post-meta-line time { font-size: 11px; }
+  .post-main p { font-size: 13px; }
+  .category-list-title { font-size: 15px; }
+  .category-list-description { font-size: 13px; }
+  .page-body { font-size: 15px; }
+  .footer-inner { font-size: 12px; }
+  .post-article-meta { font-size: 12px; }
+  .post-article-body { font-size: 15px; }
+  .post-article-body h3 { font-size: 17px; }
+}
