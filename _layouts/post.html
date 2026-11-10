@@ -9,9 +9,7 @@ layout: default
     {% assign category_label = post_category | replace: '-', ' ' | capitalize %}
     {% assign category_url = nil %}
     {% for category in site.data.categories %}
-      {% assign category_slug = category.title | slugify %}
-      {% assign post_category_slug = post_category | slugify %}
-      {% if category_slug == post_category_slug %}
+      {% if category.slug == post_category %}
         {% assign category_label = category.title %}
         {% assign category_url = category.url %}
       {% endif %}
