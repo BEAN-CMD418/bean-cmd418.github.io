@@ -13,6 +13,12 @@ layout: default
     {{ content }}
 
     {% if page.category %}
+      {% assign category_display = page.category %}
+      {% for category in site.data.categories %}
+        {% if category.slug == page.category %}
+          {% assign category_display = category.title %}
+        {% endif %}
+      {% endfor %}
       {% assign category_posts = site.posts | where_exp: "post", "post.categories contains page.category" | sort: 'date' | reverse %}
       <section class="category-post-section" aria-labelledby="category-post-heading">
         <div class="section-heading">
@@ -24,7 +30,7 @@ layout: default
             <a class="post-row post-row-no-image" href="{{ post.url | relative_url }}">
               <div class="post-main">
                 <div class="post-meta-line">
-                  <span class="post-category">{{ page.category }}</span>
+                  <span class="post-category">{{ category_display }}</span>
                   <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%Y.%m.%d' }}</time>
                 </div>
                 <h3>{{ post.title }}</h3>
