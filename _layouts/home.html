@@ -13,7 +13,13 @@ layout: default
     <div class="post-list" id="post-list">
       {% assign latest_posts = site.posts | sort: 'date' | reverse %}
       {% for post in latest_posts %}
-        {% assign category_label = post.categories | first | default: 'BLOG' %}
+        {% assign post_category = post.categories | first %}
+        {% assign category_label = '블로그' %}
+        {% for category in site.data.categories %}
+          {% if category.slug == post_category %}
+            {% assign category_label = category.title %}
+          {% endif %}
+        {% endfor %}
         <a class="post-row{% unless post.image %} post-row-no-image{% endunless %}" href="{{ post.url | relative_url }}" data-post-row data-initial-hidden="{% if forloop.index > 10 %}true{% else %}false{% endif %}" {% if forloop.index > 10 %}hidden{% endif %} data-title="{{ post.title | escape }}" data-tags="{{ post.tags | join: '||' | escape }}" data-categories="{{ post.categories | join: ' ' | escape }}" data-search-content="{{ post.content | strip_html | normalize_whitespace | escape }}">
           {% if post.image %}
           <div class="post-thumb">
@@ -22,7 +28,7 @@ layout: default
           {% endif %}
           <div class="post-main">
             <div class="post-meta-line">
-              <span class="post-category">{{ category_label | replace: '-', ' ' | upcase }}</span>
+              <span class="post-category">{{ category_label }}</span>
               <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%Y.%m.%d' }}</time>
             </div>
             <h3>{{ post.title }}</h3>
