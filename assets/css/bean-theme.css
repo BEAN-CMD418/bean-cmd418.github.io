@@ -789,3 +789,29 @@ body.is-leaving .page-shell { animation: bean-page-leave .14s ease-in both; }
     height: 170px;
   }
 }
+
+/* Korean typography: wrap at spaces instead of splitting Hangul words. */
+html[lang^="ko"] body {
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+
+/* Keep long URLs and code from stretching the layout. */
+html[lang^="ko"] a,
+html[lang^="ko"] code,
+html[lang^="ko"] pre,
+html[lang^="ko"] .post-article-title {
+  overflow-wrap: anywhere;
+}
+
+/* Restore natural Korean word wrapping in article and page headings. */
+html[lang^="ko"] .post-article-title,
+html[lang^="ko"] .page-heading h1,
+html[lang^="ko"] .page-body h1,
+html[lang^="ko"] .page-body h2,
+html[lang^="ko"] .post-article-body h1,
+html[lang^="ko"] .post-article-body h2,
+html[lang^="ko"] .post-article-body h3 {
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
