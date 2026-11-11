@@ -3,6 +3,7 @@ description: "Development, Information Security and Research"
 author: "BEAN"
 theme: minima
 lang: ko-KR
+timezone: Asia/Seoul
 
 header_pages:
   - about.md
