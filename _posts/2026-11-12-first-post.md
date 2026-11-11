@@ -1,6 +1,6 @@
 ---
 title: "'나'에 대해 기록하기"
-date: 2026-11-12 12:00:00 +0900
+date: 2026-11-12 00:00:00 +0000
 categories: [tech-docs]
 tags: [Blog]
 ---
