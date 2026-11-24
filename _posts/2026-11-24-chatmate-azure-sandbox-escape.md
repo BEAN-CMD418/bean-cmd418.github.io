@@ -75,3 +75,9 @@ tags: [AI Security, Prompt Injection, Sandbox Escape]
 
 - AI 보안 측면: 신뢰할 수 없는 입력이 포함된 채팅 세션을 광범위하게 모니터링해야 함.
 - 클라우드 보안 측면: Host 네트워크 접근을 제한하고, 내부 서비스도 외부에 노출된 서비스와 동일한 수준의 보안 기준으로 보호해야함.
+
+## 10. 공격 과정
+
+![ChatMate 공격 과정]({{ '/assets/chatmate-attack-process.jpg' | relative_url }})
+
+*(출처: Black Hat USA 2026 | ChatMate: Remote Prompt Execution on AI Assistants through Sandbox Escaping)*
