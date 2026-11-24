@@ -1,17 +1,16 @@
 ---
-title: "ChatMate: Remote Prompt Execution on AI Assistants through Sandbox Escaping"
+title: "Black Hat USA 2026 | ChatMate: Remote Prompt Execution on AI Assistants through Sandbox Escaping: 프롬프트 인젝션을 통한 인프라 접근"
 date: 2026-11-24 23:52:00 +0900
 categories: [research]
-tags: [Black Hat, AI Security, Prompt Injection, Sandbox Escape, Azure]
+tags: [AI Security, Prompt Injection, Sandbox Escape]
 ---
 
 <div style="display: flex; justify-content: center; width: 100%;">
   <iframe width="560" height="315" style="display: block; max-width: 100%; margin-left: auto; margin-right: auto; border: 0;" src="https://www.youtube-nocookie.com/embed/MspRSCAb6uI?si=14QKkiP0g40si626" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
-# Black Hat USA 2026 | ChatMate: Remote Prompt Execution on AI Assistants through Sandbox Escaping
 
-**Azure 인프라 취약점을 어떻게 해킹했을까?**
+**Azure 인프라 취약점을 어떻게 해킹했을까?** <br>
 
 Microsoft Copilot을 이용해 일련의 단계를 수행했다.
 
@@ -49,14 +48,14 @@ Microsoft Copilot을 이용해 일련의 단계를 수행했다.
 
 - 연구진은 Azure Container App을 생성하고, 수백만 개의 경로가 포함된 Dictionary를 이용해 ACR Image Streaming 서비스의 HTTP 경로를 무차별 대입하며 공격함.
 - `/config` 경로를 발견하고 `name`이라는 필드를 요구함을 확인함.
-- 서로 다른 파일 경로가 동일한 파일을 가리키는지 확인했고 Config 저장 디렉터리 밖의 파일에 접근할 수 있는 Directory Traversal 취약점을 확인함.
+- 서로 다른 파일 경로가 동일한 파일을 가리키는지 확인했고 config 저장 디렉터리 밖의 파일에 접근할 수 있는 Directory Traversal 취약점을 확인함.
 - 파일을 새로 생성하는 것은 가능했지만 기존 파일을 덮어쓰거나 생성한 파일의 실제 내용을 확인할 수 없었음.
 
 ## 6. Sandbox 탈출
 
 - cloud-init(클라우드 서버가 처음 실행될 때 계정, 네트워크, 프로그램 설치 등 필요한 초기 설정을 자동으로 수행하는 도구) 관련 파일의 존재를 확인하고, ACR Image Streaming 서비스가 Sandbox 외부의 Host 파일 시스템에 파일을 기록하고 있음을 확인함.
 - Sandbox 내부에 Host의 특정 파일을 가리키는 심볼릭 링크(Symbolic Link)를 만들고, 외부 서비스가 해당 링크에 파일을 기록하도록 해 Sandbox 바깥의 Host 파일까지 수정할 수 있음을 확인함.
-- 파일 이름에 줄바꿈(`\\n`)이 허용되는 점을 이용해 config 이름에 여러 줄의 내용을 삽입할 수 있게됨.
+- 파일 이름에 줄바꿈(`\n`)이 허용되는 점을 이용해 config 이름에 여러 줄의 내용을 삽입할 수 있게됨.
 - `/etc/ld.so.preload` 파일에 악성 공유 라이브러리 경로를 기록하고 Sandbox 바깥의 Host에서 공격자 코드가 실행되도록 함, 성공!
 
 ## 7. 데이터 유출
