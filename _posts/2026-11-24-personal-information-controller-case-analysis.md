@@ -10,19 +10,19 @@ tags: [개인정보 보호법, 판례 분석]
 <div style="border: 1px solid #d5deea; padding: 12px 14px; margin: 8px 0;">
 <strong>대법원</strong><br>
 대법원 2026. 4. 16. 선고 2026도477 판결<br>
-[판결문 원문] [링크](https://www.law.go.kr/%ED%8C%90%EB%A1%80/%EB%8F%84%EB%B0%95%EA%B3%B5%EA%B0%84%EA%B0%9C%EC%84%A4%C2%B7%EA%B0%9C%EC%9D%B8%EC%A0%95%EB%B3%B4%EB%B3%B4%ED%98%B8%EB%B2%95%EC%9C%84%EB%B0%98/%282026%EB%8F%84477%29)
+[https://www.law.go.kr/판례/도박공간개설·개인정보보호법위반/(2026도477)](https://www.law.go.kr/판례/도박공간개설·개인정보보호법위반/\(2026도477\))
 </div>
 
 <div style="border: 1px solid #d5deea; padding: 12px 14px; margin: 8px 0;">
 <strong>항소심</strong><br>
 의정부지방법원 2025. 12. 19. 선고 2025노2686 판결<br>
-[판결문 원문] [링크](https://www.law.go.kr/%ED%8C%90%EB%A1%80/%EB%8F%84%EB%B0%95%EA%B3%B5%EA%B0%84%EA%B0%9C%EC%84%A4%2C%EA%B0%9C%EC%9D%B8%EC%A0%95%EB%B3%B4%EB%B3%B4%ED%98%B8%EB%B2%95%EC%9C%84%EB%B0%98/%282025%EB%85%B82686%29)
+[https://www.law.go.kr/판례/도박공간개설,개인정보보호법위반/(2025노2686)](https://www.law.go.kr/판례/도박공간개설,개인정보보호법위반/\(2025노2686\))
 </div>
 
 <div style="border: 1px solid #d5deea; padding: 12px 14px; margin: 8px 0;">
 <strong>1심</strong><br>
 의정부지방법원 남양주지원 2025. 8. 27. 선고 2025고단1185 판결<br>
-[판결문 원문] [링크](https://www.law.go.kr/%ED%8C%90%EB%A1%80/%EB%8F%84%EB%B0%95%EA%B3%B5%EA%B0%84%EA%B0%9C%EC%84%A4%2C%EA%B0%9C%EC%9D%B8%EC%A0%95%EB%B3%B4%EB%B3%B4%ED%98%B8%EB%B2%95%EC%9C%84%EB%B0%98/%282025%EA%B3%A0%EB%8B%A81185%29)
+[https://www.law.go.kr/판례/도박공간개설,개인정보보호법위반/(2025고단1185)](https://www.law.go.kr/판례/도박공간개설,개인정보보호법위반/\(2025고단1185\))
 </div>
 
 ## 2. 사건의 과정과 문제가 된 개인정보
