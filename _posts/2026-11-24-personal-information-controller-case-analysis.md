@@ -7,29 +7,29 @@ tags: [개인정보보호법, 판례분석]
 
 ## 1. 분석할 판례
 
-**대법원**
-
 <div style="border: 1px solid #d5deea; padding: 12px 14px; margin: 8px 0;">
+<strong>대법원</strong>
+
 도박공간개설·개인정보보호법위반 [대법원 2026. 4. 16. 선고 2026도477 판결]
-</div>
 
 [대법원 판결문 원문](https://www.law.go.kr/판례/도박공간개설·개인정보보호법위반/(2026도477))
-
-**항소심**
+</div>
 
 <div style="border: 1px solid #d5deea; padding: 12px 14px; margin: 8px 0;">
+<strong>항소심</strong>
+
 도박공간개설, 개인정보보호법위반 [의정부지방법원 2025. 12. 19. 선고 2025노2686 판결]
-</div>
 
 [항소심 판결문 원문](https://www.law.go.kr/판례/도박공간개설,개인정보보호법위반/(2025노2686))
-
-**1심**
-
-<div style="border: 1px solid #d5deea; padding: 12px 14px; margin: 8px 0;">
-도박공간개설, 개인정보보호법위반 [의정부지방법원 남양주지원 2025. 8. 27. 선고 2025고단1185 판결]
 </div>
 
+<div style="border: 1px solid #d5deea; padding: 12px 14px; margin: 8px 0;">
+<strong>1심</strong>
+
+도박공간개설, 개인정보보호법위반 [의정부지방법원 남양주지원 2025. 8. 27. 선고 2025고단1185 판결]
+
 [1심 판결문 원문](https://www.law.go.kr/판례/도박공간개설,개인정보보호법위반/(2025고단1185))
+</div>
 
 ## 2. 사건의 과정과 문제가 된 개인정보
 
