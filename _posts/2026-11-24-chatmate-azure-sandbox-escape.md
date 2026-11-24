@@ -9,7 +9,7 @@ tags: [AI Security, Prompt Injection, Sandbox Escape]
   <iframe width="560" height="315" style="display: block; max-width: 100%; margin-left: auto; margin-right: auto; border: 0;" src="https://www.youtube-nocookie.com/embed/MspRSCAb6uI?si=14QKkiP0g40si626" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
-
+<br>
 <p style="margin: 0 0 4px;"><span style="font-size: 20px; font-weight: bold;">Azure 인프라 취약점을 어떻게 해킹했을까?</span></p>
 <p style="margin: 0;">연구진은 Microsoft Copilot을 이용해 일련의 단계를 수행했다.</p>
 
