@@ -5,8 +5,8 @@ categories: [research]
 tags: [Black Hat, AI Security, Prompt Injection, Sandbox Escape, Azure]
 ---
 
-<div align="center" style="text-align: center; width: 100%;">
-  <iframe width="560" height="315" style="display: inline-block; max-width: 100%; border: 0;" src="https://www.youtube-nocookie.com/embed/MspRSCAb6uI?si=14QKkiP0g40si626" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<div style="display: flex; justify-content: center; width: 100%;">
+  <iframe width="560" height="315" style="display: block; max-width: 100%; margin-left: auto; margin-right: auto; border: 0;" src="https://www.youtube-nocookie.com/embed/MspRSCAb6uI?si=14QKkiP0g40si626" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
 # Black Hat USA 2026 | ChatMate: Remote Prompt Execution on AI Assistants through Sandbox Escaping
