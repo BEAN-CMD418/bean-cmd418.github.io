@@ -10,13 +10,15 @@ tags: [AI Security, Prompt Injection, Sandbox Escape]
 </div>
 
 
-**Azure 인프라 취약점을 어떻게 해킹했을까?** <br>
+<br><span style="font-size: 20px; font-weight: bold;">Azure 인프라 취약점을 어떻게 해킹했을까?</span>
 
-Microsoft Copilot을 이용해 일련의 단계를 수행했다.
+연구진은 Microsoft Copilot을 이용해 일련의 단계를 수행했다.
 
 1. Copilot에 대한 이해
 2. 공격자가 어떻게 영향을 줄 수 있을까?
 3. 입력값과 목표를 어떻게 달성할 수 있을까?
+
+---
 
 ## 1. Copilot에 대한 이해
 
@@ -35,7 +37,7 @@ Microsoft Copilot을 이용해 일련의 단계를 수행했다.
 
 ## 3. 권한 상승
 
-- Python 코드는 낮은 권한의 사용자로 실행되고,`entypoint.sh`를 실행하는 프로세스는 Root 권한으로 실행한다는 것을 확인함.
+- Python 코드는 낮은 권한의 사용자로 실행되고, `entypoint.sh`를 실행하는 프로세스는 Root 권한으로 실행한다는 것을 확인함.
 - `entypoint.sh`에 악성 명령을 추가해 Root 권한 확보
 
 ## 4. Azure Dynamic Sessions
