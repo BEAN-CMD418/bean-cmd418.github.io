@@ -5,7 +5,9 @@ categories: [tech-docs]
 tags: [AI 보안, Prompt Injection, Sandbox Escape, Azure, Copilot]
 ---
 
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/MspRSCAb6uI?si=14QKkiP0g40si626" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<div style="text-align: center;">
+  <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/MspRSCAb6uI?si=14QKkiP0g40si626" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
 # Black Hat USA 2026 | ChatMate: Remote Prompt Execution on AI Assistants through Sandbox Escaping
 
