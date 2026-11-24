@@ -10,9 +10,8 @@ tags: [AI Security, Prompt Injection, Sandbox Escape]
 </div>
 
 
-<br><span style="font-size: 20px; font-weight: bold;">Azure 인프라 취약점을 어떻게 해킹했을까?</span>
-
-연구진은 Microsoft Copilot을 이용해 일련의 단계를 수행했다.
+<p style="margin: 0 0 4px;"><span style="font-size: 20px; font-weight: bold;">Azure 인프라 취약점을 어떻게 해킹했을까?</span></p>
+<p style="margin: 0;">연구진은 Microsoft Copilot을 이용해 일련의 단계를 수행했다.</p>
 
 1. Copilot에 대한 이해
 2. 공격자가 어떻게 영향을 줄 수 있을까?
