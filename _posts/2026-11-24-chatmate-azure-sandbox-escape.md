@@ -16,7 +16,7 @@ tags: [AI Security, Prompt Injection, Sandbox Escape]
 
 1. Copilot에 대한 이해
 2. 공격자가 어떻게 영향을 줄 수 있을까?
-3. 입력값과 목표를 어떻게 달성할 수 있을까?
+3. 입력값과 목표를 어떻게 달성할 수 있을까? <br>
 
 ---
 
