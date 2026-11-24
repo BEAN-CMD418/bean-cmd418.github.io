@@ -36,8 +36,8 @@ Microsoft Copilot을 이용해 일련의 단계를 수행했다.
 
 ## 3. 권한 상승
 
-- Python 코드는 낮은 권한의 사용자로 실행되고,'entypoint.sh'를 실행하는 프로세스는 Root 권한으로 실행한다는 것을 확인함.
-- 'entypoint.sh'에 악성 명령을 추가해 Root 권한 확보
+- Python 코드는 낮은 권한의 사용자로 실행되고,`entypoint.sh`를 실행하는 프로세스는 Root 권한으로 실행한다는 것을 확인함.
+- `entypoint.sh`에 악성 명령을 추가해 Root 권한 확보
 
 ## 4. Azure Dynamic Sessions
 
@@ -48,7 +48,7 @@ Microsoft Copilot을 이용해 일련의 단계를 수행했다.
 ## 5. 인프라 내부 서비스 분석
 
 - 연구진은 Azure Container App을 생성하고, 수백만 개의 경로가 포함된 Dictionary를 이용해 ACR Image Streaming 서비스의 HTTP 경로를 무차별 대입하며 공격함.
-- '/config' 경로를 발견하고 'name'이라는 필드를 요구함을 확인함.
+- `/config` 경로를 발견하고 `name`이라는 필드를 요구함을 확인함.
 - 서로 다른 파일 경로가 동일한 파일을 가리키는지 확인했고 Config 저장 디렉터리 밖의 파일에 접근할 수 있는 Directory Traversal 취약점을 확인함.
 - 파일을 새로 생성하는 것은 가능했지만 기존 파일을 덮어쓰거나 생성한 파일의 실제 내용을 확인할 수 없었음.
 
@@ -56,8 +56,8 @@ Microsoft Copilot을 이용해 일련의 단계를 수행했다.
 
 - cloud-init(클라우드 서버가 처음 실행될 때 계정, 네트워크, 프로그램 설치 등 필요한 초기 설정을 자동으로 수행하는 도구) 관련 파일의 존재를 확인하고, ACR Image Streaming 서비스가 Sandbox 외부의 Host 파일 시스템에 파일을 기록하고 있음을 확인함.
 - Sandbox 내부에 Host의 특정 파일을 가리키는 심볼릭 링크(Symbolic Link)를 만들고, 외부 서비스가 해당 링크에 파일을 기록하도록 해 Sandbox 바깥의 Host 파일까지 수정할 수 있음을 확인함.
-- 파일 이름에 줄바꿈('\\n')이 허용되는 점을 이용해 config 이름에 여러 줄의 내용을 삽입할 수 있게됨.
-- '/etc/ld.so.preload' 파일에 악성 공유 라이브러리 경로를 기록하고 Sandbox 바깥의 Host에서 공격자 코드가 실행되도록 함, 성공!
+- 파일 이름에 줄바꿈(`\\n`)이 허용되는 점을 이용해 config 이름에 여러 줄의 내용을 삽입할 수 있게됨.
+- `/etc/ld.so.preload` 파일에 악성 공유 라이브러리 경로를 기록하고 Sandbox 바깥의 Host에서 공격자 코드가 실행되도록 함, 성공!
 
 ## 7. 데이터 유출
 
