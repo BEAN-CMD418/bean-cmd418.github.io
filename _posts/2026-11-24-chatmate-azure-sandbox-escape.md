@@ -80,4 +80,4 @@ tags: [AI Security, Prompt Injection, Sandbox Escape]
 
 ![ChatMate 공격 과정]({{ '/assets/chatmate-attack-process.jpg' | relative_url }})
 
-*(출처: Black Hat USA 2026 | ChatMate: Remote Prompt Execution on AI Assistants through Sandbox Escaping)*
+<p style="text-align: center; font-size: 13px; margin-top: -8px;"><em>(출처: Black Hat USA 2026 | ChatMate: Remote Prompt Execution on AI Assistants through Sandbox Escaping)</em></p>
