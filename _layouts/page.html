@@ -13,13 +13,14 @@ layout: default
     {{ content }}
 
     {% if page.category %}
-      {% assign category_display = page.category %}
+      {% assign category_slug = page.category_icon %}
+      {% assign category_display = page.title %}
       {% for category in site.data.categories %}
-        {% if category.slug == page.category %}
+        {% if category.slug == category_slug %}
           {% assign category_display = category.title %}
         {% endif %}
       {% endfor %}
-      {% assign category_posts = site.posts | where_exp: "post", "post.categories contains page.category" | sort: 'date' | reverse %}
+      {% assign category_posts = site.posts | where_exp: "post", "post.categories contains category_slug" | sort: 'date' | reverse %}
       <section class="category-post-section" aria-labelledby="category-post-heading">
         <div class="section-heading">
           <h2 id="category-post-heading">게시글</h2>
