@@ -15,29 +15,29 @@ tags: [ICS, Fuzzing, Industrial Control Systems]
 
 &nbsp;&nbsp;연구자들은 컨트롤러 내부를 확인하지 않고도 물리적 보안 취약점을 탐색할 수 있는 **ICFlux(Physics-Aware Fuzzing 체계)**를 제안했다. 여기서 **Fuzzing**이란 다양한 입력을 반복적으로 넣어 시스템의 예상하지 못한 동작이나 취약점을 찾아내는 테스트 기법이다. ICFlux는 탐색할 물리적 공간을 구성하고 위험 상태를 향해 탐색하는 순서로 나타난다. 자세한 순서는 다음과 같다.
 
-### (1) 인과관계 추출 (CDC)
+<p style="font-size: 16px; font-weight: bold; margin: 20px 0 8px;">(1) 인과관계 추출 (CDC)</p>
 
-- 정상적인 운영 명령을 조금씩 바꾸고, 그에 따른 물리적 변수들의 변화를 관찰해 변수 사이의 인과관계와 영향의 정도를 제약 조건으로 추출한다.
+<p style="margin: 0 0 10px;">• 정상적인 운영 명령을 조금씩 바꾸고, 그에 따른 물리적 변수들의 변화를 관찰해 변수 사이의 인과관계와 영향의 정도를 제약 조건으로 추출한다.</p>
 
-### (2) 인과 진화 그래프 (CEG) 생성
+<p style="font-size: 16px; font-weight: bold; margin: 20px 0 8px;">(2) 인과 진화 그래프 (CEG) 생성</p>
 
-- 물리 모델과 앞에서 추출한 인과관계를 이용해, 위험한 상태에 도달하기 전에 어떤 상태들이 있었을지 역으로 추정한다.
+<p style="margin: 0 0 10px;">• 물리 모델과 앞에서 추출한 인과관계를 이용해, 위험한 상태에 도달하기 전에 어떤 상태들이 있었을지 역으로 추정한다.</p>
 
-### (3) 인과 구획 (Causal Compartments) 생성
+<p style="font-size: 16px; font-weight: bold; margin: 20px 0 8px;">(3) 인과 구획 (Causal Compartments) 생성</p>
 
-- 추정한 상태들을 위험 상태까지의 시간적 거리와 물리적 조건에 따라 구획으로 나눈다. 결과적으로 CPSS(Constrained Physical State Space)라는 물리적으로 가능한 상태와 인과관계를 반영해 탐색 범위를 제한한 공간이 만들어진다.
+<p style="margin: 0 0 10px;">• 추정한 상태들을 위험 상태까지의 시간적 거리와 물리적 조건에 따라 구획으로 나눈다. 결과적으로 CPSS(Constrained Physical State Space)라는 물리적으로 가능한 상태와 인과관계를 반영해 탐색 범위를 제한한 공간이 만들어진다.</p>
 
-### (4) 현재 상태를 바탕으로 탐색 방향 결정
+<p style="font-size: 16px; font-weight: bold; margin: 20px 0 8px;">(4) 현재 상태를 바탕으로 탐색 방향 결정</p>
 
-- 현재 물리 상태를 확인하고 위험 상태에 가까워질 수 있는 목표와 진행 방향을 결정한다.
+<p style="margin: 0 0 10px;">• 현재 물리 상태를 확인하고 위험 상태에 가까워질 수 있는 목표와 진행 방향을 결정한다.</p>
 
-### (5) 명령 변형 및 탐색
+<p style="font-size: 16px; font-weight: bold; margin: 20px 0 8px;">(5) 명령 변형 및 탐색</p>
 
-- 결정된 방향에 따라 명령을 변형하고, 필요하면 이벤트를 발생시키거나 새로운 상태에서 탐색을 다시 시작한다.
+<p style="margin: 0 0 10px;">• 결정된 방향에 따라 명령을 변형하고, 필요하면 이벤트를 발생시키거나 새로운 상태에서 탐색을 다시 시작한다.</p>
 
-### (6) 결과 관찰 및 피드백
+<p style="font-size: 16px; font-weight: bold; margin: 20px 0 8px;">(6) 결과 관찰 및 피드백</p>
 
-- 명령 이후 물리 상태가 어떻게 변했는지 확인하고 다음 탐색 방향을 조정하며 반복한다.
+<p style="margin: 0 0 10px;">• 명령 이후 물리 상태가 어떻게 변했는지 확인하고 다음 탐색 방향을 조정하며 반복한다.</p>
 
 ---
 
