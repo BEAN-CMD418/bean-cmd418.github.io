@@ -2,6 +2,7 @@
 title: "ERC-20과 USDC 컨트랙트 살펴보기"
 date: 2026-11-28 00:00:00 +0900
 categories: [tech-docs]
+tags: [이더리움, ERC-20, USDC, 스마트 컨트랙트]
 ---
 
 &nbsp;&nbsp;여름 방학이 끝날 무렵 가상 자산과 관련한 특강을 들었었다. 하지만 이더리움과 같은 가상 자산의 실행 원리를 자세히는 잘 알 수 없었다. 이더리움이 어떻게 작동되는지 그 원리가 궁금해서 기초 거래 표준 규약부터 알아보기로 했다.
@@ -39,8 +40,10 @@ _balanceOf(to).add(value) //잔액을 더할 때 사용
 
 ## 참고 자료
 
-<div style="border: 1px solid #d9e2ee; border-radius: 8px; padding: 14px 18px; margin: 12px 0;">
-  <p style="margin: 4px 0;">EIP-20: Token Standard (<a href="https://eips.ethereum.org/EIPS/eip-20">Link</a>)</p>
-  <p style="margin: 4px 0;">Circle: FiatTokenV2_2 (<a href="https://github.com/circlefin/stablecoin-evm/blob/master/contracts/v2/FiatTokenV2_2.sol">Link</a>)</p>
-  <p style="margin: 4px 0;">ERC-2612: Permit Extension (<a href="https://ercs.ethereum.org/ERCS/erc-2612">Link</a>)</p>
+<div style="border: 1px solid #d5deea; padding: 12px 14px; margin: 8px 0;">
+<ul>
+<li><a href="https://eips.ethereum.org/EIPS/eip-20">EIP-20: Token Standard</a></li>
+<li><a href="https://github.com/circlefin/stablecoin-evm/blob/master/contracts/v2/FiatTokenV2_2.sol">Circle, FiatTokenV2_2</a></li>
+<li><a href="https://ercs.ethereum.org/ERCS/erc-2612">ERC-2612: Permit Extension</a></li>
+</ul>
 </div>
