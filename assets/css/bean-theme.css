@@ -819,13 +819,13 @@ html[lang^="ko"] .post-article-body h3 {
 
 /* More visible inline code styling inside individual posts. */
 .post-article-body :not(pre) > code {
-  padding: .12em .38em;
-  border: 1px solid #d7dee7;
-  border-radius: 4px;
-  background: #e9edf2;
-  color: #344253;
+  padding: .15em .4em;
+  border: 0;
+  border-radius: 5px;
+  background: #f0f1f2;
+  color: #24292f;
   font-size: .9em;
-  font-weight: 600;
+  font-weight: 400;
   white-space: normal;
 }
 .post-article-body pre code {
