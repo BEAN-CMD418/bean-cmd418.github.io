@@ -836,3 +836,52 @@ html[lang^="ko"] .post-article-body h3 {
   color: inherit;
   font-weight: 400;
 }
+
+/* Rouge syntax highlighting for fenced code blocks (GitHub-like light theme). */
+.post-article-body .highlight .k,
+.post-article-body .highlight .kd,
+.post-article-body .highlight .kn,
+.post-article-body .highlight .kp,
+.post-article-body .highlight .kr {
+  color: #cf222e;
+}
+.post-article-body .highlight .kt,
+.post-article-body .highlight .nc,
+.post-article-body .highlight .no {
+  color: #0550ae;
+}
+.post-article-body .highlight .nf,
+.post-article-body .highlight .fm {
+  color: #8250df;
+}
+.post-article-body .highlight .s,
+.post-article-body .highlight .s1,
+.post-article-body .highlight .s2,
+.post-article-body .highlight .sr {
+  color: #0a3069;
+}
+.post-article-body .highlight .m,
+.post-article-body .highlight .mi,
+.post-article-body .highlight .mf,
+.post-article-body .highlight .mh {
+  color: #0550ae;
+}
+.post-article-body .highlight .c,
+.post-article-body .highlight .c1,
+.post-article-body .highlight .cm,
+.post-article-body .highlight .cp {
+  color: #6e7781;
+  font-style: italic;
+}
+.post-article-body .highlight .o,
+.post-article-body .highlight .ow {
+  color: #cf222e;
+}
+.post-article-body .highlight .na,
+.post-article-body .highlight .nb {
+  color: #953800;
+}
+.post-article-body .highlight .n,
+.post-article-body .highlight .p {
+  color: #24292f;
+}
