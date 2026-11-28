@@ -42,7 +42,7 @@ _balanceOf(to).add(value) //잔액을 더할 때 사용
 
 <div style="border: 1px solid #d5deea; padding: 12px 14px; margin: 8px 0;">
 <ul>
-<li><a href="https://eips.ethereum.org/EIPS/eip-20">ERC-20</a></li>
+<li><a href="https://eips.ethereum.org/EIPS/eip-20">ERC-20: Token Standard</a></li>
 <li><a href="https://github.com/circlefin/stablecoin-evm/blob/master/contracts/v2/FiatTokenV2_2.sol">Circle, FiatTokenV2_2</a></li>
 <li><a href="https://ercs.ethereum.org/ERCS/erc-2612">Permit Extension for EIP-20 Signed Approvals</a></li>
 </ul>
