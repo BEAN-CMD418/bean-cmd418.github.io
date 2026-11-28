@@ -891,6 +891,13 @@ html[lang^="ko"] .post-article-body h3 {
   color: #8250df;
 }
 
+/* Explicit colors for the Solidity example in the ERC-20 post. */
+.post-article-body pre.highlight .sol-keyword { color: #cf222e !important; }
+.post-article-body pre.highlight .sol-type { color: #0550ae !important; }
+.post-article-body pre.highlight .sol-purple { color: #8250df !important; }
+.post-article-body pre.highlight .sol-plain { color: #24292f !important; }
+.post-article-body pre.highlight .sol-comment { color: #6e7781 !important; font-style: italic; }
+
 /* Keep plain variables and parameters black. */
 .post-article-body .highlight .nx {
   color: #24292f;
