@@ -845,13 +845,14 @@ html[lang^="ko"] .post-article-body h3 {
 .post-article-body .highlight .kr {
   color: #cf222e;
 }
-.post-article-body .highlight .kt,
-.post-article-body .highlight .nc,
-.post-article-body .highlight .no {
+.post-article-body .highlight .kt {
   color: #0550ae;
 }
+.post-article-body .highlight .nc,
 .post-article-body .highlight .nf,
-.post-article-body .highlight .fm {
+.post-article-body .highlight .fm,
+.post-article-body .highlight .n,
+.post-article-body .highlight .no {
   color: #8250df;
 }
 .post-article-body .highlight .s,
