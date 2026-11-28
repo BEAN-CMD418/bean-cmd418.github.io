@@ -882,7 +882,11 @@ html[lang^="ko"] .post-article-body h3 {
 .post-article-body .highlight .nb {
   color: #953800;
 }
-.post-article-body .highlight .n,
 .post-article-body .highlight .p {
   color: #24292f;
+}
+
+/* Keep Solidity identifiers and function/member names purple. */
+.post-article-body .highlight .n {
+  color: #8250df;
 }
