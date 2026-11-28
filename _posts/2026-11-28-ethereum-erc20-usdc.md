@@ -33,10 +33,8 @@ tags: [이더리움, ERC-20, USDC, 스마트 컨트랙트]
 &nbsp;&nbsp;approve()와 transferFrom()과 같은 함수는 따로 존재했다. 우리나라에서도 각각의 거래는 은행마다 진행되지만 실제 자금의 이동은 자정 무렵 한국 은행을 통해서니까 이처럼 실행되는 것일까? 이러한 궁금증을 안고 살펴보았다. 이더리움에서는 `transfer()`나 `transferFrom()` 트랜잭션이 블록에 포함되어 성공하면 해당 트랜잭션 안에서 토큰 잔액이 갱신된다. 따라서 `approve()`는 토큰을 사용할 수 있는 권한을 미리 설정하고, `transferFrom()`은 그 권한을 이용해 실제 토큰을 전송한다. <br>
 &nbsp;&nbsp;또 코드를 살펴보다가 궁금증이 생겼다. `uint256 _value`를 사용하고 있다면 이보다 더 큰 수(2^256-1보다 더 큰 수)를 받게 된다면 오버플로가 발생할 수도 있는데 이 가능성은 어떻게 차단하고 있을까? 실제 구현에서는 OpenZeppelin의 `SafeMath`를 사용하고 있음을 알게 됐다. `SafeMath`는 연산 결과가 표현할 수 있는 범위를 초과하면 트랜잭션을 실패시키기 때문에 값이 순환하는 오버플로를 방지한다. 다음은 solidity에서의 사용 예시이다.
 
-```solidity
-using SafeMath for uint256;
-_balanceOf(to).add(value) //잔액을 더할 때 사용
-```
+<pre class="highlight"><code><span class="sol-keyword">using</span> <span class="sol-purple">SafeMath</span> <span class="sol-keyword">for</span> <span class="sol-type">uint256</span>;
+<span class="sol-purple">_balanceOf</span>(<span class="sol-plain">to</span>).<span class="sol-purple">add</span>(<span class="sol-plain">value</span>) <span class="sol-comment">//잔액을 더할 때 사용</span></code></pre>
 
 ## 참고 자료
 
