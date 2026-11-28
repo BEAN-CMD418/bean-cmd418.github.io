@@ -23,7 +23,7 @@ tags: [이더리움, ERC-20, USDC, 스마트 컨트랙트]
 * `event Transfer(address indexed _from, address indexed _to, uint256 _value)`은 0값 전송을 포함해서 **토큰이 전송될 때마다** 실행된다.
 * `event Approval(address indexed _owner, address indexed _spender, uint256 _value)`은 **성공적으로 호출**되었다면 실행된다.
 
-&nbsp;&nbsp;History에서 관련된 링크를 열어보았다. 레딧은 페이지 열기가 가능하길래 한 번 살펴봤다. [레딧](https://www.reddit.com/r/ethereum/s/8iu5fpTE8H)에서 개발자들이 이야기 한 걸 토대로 만들어진 거겠지? 처음엔 Token이 아니라 Coin이라는 말로 통일되어 있었다고 한다. 하긴 Coin이면 비트코인만 지칭하는 것 같긴 하다.
+&nbsp;&nbsp;History에서 관련된 링크를 열어보았다. 레딧은 페이지 열기가 가능하길래 한 번 살펴봤다. [레딧](https://www.reddit.com/r/ethereum/s/8iu5fpTE8H)에서 개발자들이 이야기 한 걸 토대로 만들어진 것 같다. 처음엔 Token이 아니라 Coin이라는 말로 통일되어 있었다고 한다. 하긴 Coin이면 비트코인만 지칭하는 것 같긴 하다.
 
 ## 실제 활용 사례: USDC
 
